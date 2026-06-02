@@ -1,0 +1,153 @@
+# =============================================================================
+# Talay — C++ / WinUI 3 (Windows App SDK) .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Visual Studio build output
+# -----------------------------------------------------------------------------
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+ARM64/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+
+# -----------------------------------------------------------------------------
+# Visual Studio IDE / solution files (keep .sln and .vcxproj, ignore cruft)
+# -----------------------------------------------------------------------------
+.vs/
+*.ncb
+*.sdf
+*.opensdf
+*.cachefile
+*.aps
+ipch/
+
+# -----------------------------------------------------------------------------
+# MSBuild / CMake artefacts
+# -----------------------------------------------------------------------------
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CMakeSettings.json.user
+out/
+build/
+_build/
+*.cmake
+!CMakeLists.txt
+
+# -----------------------------------------------------------------------------
+# Windows App SDK / WinUI 3 generated files
+# -----------------------------------------------------------------------------
+# XAML compiler outputs
+Generated Files/
+_generated/
+*.g.h
+*.g.cpp
+*.g.cs
+XamlTypeInfo.g.cpp
+
+# Package layout & AppX artefacts
+# AppPackages: VS drops the full packaged output here — can be several GB
+AppPackages/
+AppX/
+AppxManifest.xml         # auto-generated; keep your Package.appxmanifest
+*.appx
+*.msix
+*.msixbundle
+*.appxbundle
+*.appxupload
+*.wapproj.user
+
+# WinMD (Windows Metadata) intermediate files
+*.winmd
+*.pri
+*.resfiles
+
+# -----------------------------------------------------------------------------
+# NuGet / vcpkg / package managers
+# -----------------------------------------------------------------------------
+packages/
+.nuget/
+*.nupkg
+vcpkg_installed/
+vcpkg/buildtrees/
+vcpkg/downloads/
+vcpkg/packages/
+vcpkg/ports/
+
+# -----------------------------------------------------------------------------
+# Compiled object & linker artefacts
+# -----------------------------------------------------------------------------
+*.obj
+*.o
+*.pch
+*.pdb
+*.idb
+*.ilk
+*.lib
+*.exp
+*.dll
+*.exe
+*.map
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+
+# -----------------------------------------------------------------------------
+# Intermediate resource & cache files
+# VS creates a same-named sub-folder inside the project folder (e.g.
+# Talay/Talay/) containing compiled resources, cache files, etc.
+# None of these should ever be committed.
+# -----------------------------------------------------------------------------
+# Catch the nested same-name intermediate folder regardless of depth
+**/Talay/
+
+#----------------------------------------------------------------------------
+# Code analysis & profiling
+# -----------------------------------------------------------------------------
+*.nativecodeanalysis.xml
+*.vsp
+*.vspx
+*.sap
+*.psess
+
+# -----------------------------------------------------------------------------
+# Test results
+# -----------------------------------------------------------------------------
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# -----------------------------------------------------------------------------
+# Log & crash files
+# -----------------------------------------------------------------------------
+*.log
+*.tlog/
+*.lastbuildstate
+crash_*.dmp
+*.dmp
+
+# -----------------------------------------------------------------------------
+# Editor / OS noise
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.orig
+*.bak
+*.tmp
+*~
