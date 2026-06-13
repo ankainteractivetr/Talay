@@ -13,7 +13,7 @@
 ; =====================================================================
 
 #define MyAppName "Talay"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.0.1"
 #define MyAppPublisher "kurtc"
 #define MyAppExeName "Talay.exe"
 #define SourceDir "x64\Release\Talay"

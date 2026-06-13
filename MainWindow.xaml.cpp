@@ -18,7 +18,7 @@
 #include "framework/System/Shell/OLinkOpener.hpp"
 #include "framework/System/Shell/OShellRegistrar.hpp"
 #include "framework/System/Time/UnixTime.hpp"
-#include "framework/System/Process/ExecutablePath.hpp"
+#include "TalayPaths.hpp"
 
 #include <shellapi.h>
 #include "framework/Core/IO/FilePicker/OFilePicker.hpp"
@@ -212,7 +212,7 @@ namespace winrt::Talay::implementation
 
    void MainWindow::RestoreWindowBounds()
    {
-      m_settings = std::make_unique<talay::Settings::OTalaySettings>(L"OTalaySettings",anka::System::Process::executableDirectory());
+      m_settings = std::make_unique<talay::Settings::OTalaySettings>(L"OTalaySettings",talay::Paths::userDataDirectory());
       m_settings->load();
 
       m_winX = m_settings->getMainWindowPosX();
@@ -1472,7 +1472,7 @@ namespace winrt::Talay::implementation
    {
       m_library = std::make_unique<OImageLibrary>(
          std::make_unique<OSqliteLibraryStore>(std::make_unique<OSqliteDatabase>()));
-      m_library->open((anka::System::Process::executableDirectory() / L"Talay.library.db").wstring());
+      m_library->open((talay::Paths::userDataDirectory() / L"Talay.library.db").wstring());
 
       m_libraryPanel = std::make_unique<OLibraryPanel>(*m_library);
       m_libraryPanel->onOpenRequested([this](std::wstring const& path) { OpenFromLibrary(path); });
@@ -1514,7 +1514,7 @@ namespace winrt::Talay::implementation
       m_recentFiles = std::make_unique<ORecentFilesTracker>(
          std::make_unique<OSqliteRecentFilesStore>(std::make_unique<OSqliteDatabase>()),
          k_recentFilesCapacity);
-      m_recentFiles->open((anka::System::Process::executableDirectory() / L"Talay.library.db").wstring());
+      m_recentFiles->open((talay::Paths::userDataDirectory() / L"Talay.library.db").wstring());
 
       m_recentFilesMenu = std::make_unique<ORecentFilesMenu>(*m_recentFiles);
       m_recentFilesMenu->onOpenRequested([this](std::wstring const& path) { OpenRecentFile(path); });

@@ -38,6 +38,17 @@ namespace anka::Core::IO::KnownFolders
    // sensible default, fall back to whatever else fits". The Windows-API
    // detail stays in the implementation — the header leaks no shell types.
    std::filesystem::path desktop(void);
+
+   // The current user's per-machine (non-roaming) application-data root,
+   // %LOCALAPPDATA%. Empty when the shell cannot resolve it.
+   std::filesystem::path localAppData(void);
+
+   // A writable per-user data directory for the named application,
+   // %LOCALAPPDATA%\<application>, created if it does not yet exist. This is
+   // where databases and settings belong: the install directory (e.g. Program
+   // Files) is read-only for standard users, so writing there fails. Empty when
+   // the location cannot be resolved or the directory cannot be created.
+   std::filesystem::path applicationData(const std::wstring& application);
 }
 
 #endif // ANKA_CORE_IO_KNOWNFOLDERS_HPP
