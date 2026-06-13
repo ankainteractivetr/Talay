@@ -11,7 +11,7 @@
 #include "framework/GUI/Dialog/ODialogService.hpp"
 #include "framework/System/Instance/OInstanceChannel.hpp"
 #include "framework/System/Shell/OShellRegistrar.hpp"
-#include "framework/System/Process/ExecutablePath.hpp"
+#include "TalayPaths.hpp"
 
 #include <optional>
 #include <string>
@@ -33,7 +33,7 @@ namespace
    std::optional<std::wstring> savedLanguageTag()
    {
       talay::Settings::OTalaySettings settings {
-         L"OTalaySettings", anka::System::Process::executableDirectory()};
+         L"OTalaySettings", talay::Paths::userDataDirectory()};
       settings.load();
 
       const std::optional<talay::Localization::Language> language {settings.getLanguage()};

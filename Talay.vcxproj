@@ -253,6 +253,7 @@
     <ClInclude Include="ImageFormats.hpp" />
     <ClInclude Include="LaunchRequest.hpp" />
     <ClInclude Include="TalayLinks.hpp" />
+    <ClInclude Include="TalayPaths.hpp" />
     <ClInclude Include="TalayShell.hpp" />
     <ClInclude Include="IShellIntegration.hpp" />
     <ClInclude Include="OShellIntegration.hpp" />
@@ -378,6 +379,7 @@
     <ClCompile Include="framework\Graphics\Print\OImagePrinter.cpp" />
     <ClCompile Include="OTalaySettings.cpp" />
     <ClCompile Include="LaunchRequest.cpp" />
+    <ClCompile Include="TalayPaths.cpp" />
     <ClCompile Include="TalayShell.cpp" />
     <ClCompile Include="OShellIntegration.cpp" />
     <ClCompile Include="OSettingsPresenter.cpp" />

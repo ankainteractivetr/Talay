@@ -30,6 +30,7 @@ SOFTWARE.
 #include <shlobj.h>
 
 #include <memory>
+#include <system_error>
 
 #pragma comment(lib, "Shell32.lib")
 
@@ -54,5 +55,23 @@ namespace
 std::filesystem::path anka::Core::IO::KnownFolders::desktop(void)
 {
    return resolve(FOLDERID_Desktop);
+}
+// -----------------------------------------------------------------------------
+std::filesystem::path anka::Core::IO::KnownFolders::localAppData(void)
+{
+   return resolve(FOLDERID_LocalAppData);
+}
+// -----------------------------------------------------------------------------
+std::filesystem::path anka::Core::IO::KnownFolders::applicationData(
+   const std::wstring& application)
+{
+   const auto root = localAppData();
+   if (root.empty())
+      return {};
+
+   const auto folder = root / application;
+   std::error_code ec;
+   std::filesystem::create_directories(folder, ec);
+   return ec ? std::filesystem::path {} : folder;
 }
 // -----------------------------------------------------------------------------

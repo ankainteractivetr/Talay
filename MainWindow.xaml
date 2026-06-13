@@ -687,7 +687,7 @@
                         <Border Background="#1A3FE0C8" BorderBrush="#4D3FE0C8"
                                 BorderThickness="1" CornerRadius="6"
                                 Padding="7,2" VerticalAlignment="Center">
-                            <TextBlock Text="v1.0.0" FontFamily="Consolas" FontSize="10"
+                            <TextBlock Text="v1.0.1" FontFamily="Consolas" FontSize="10"
                                        CharacterSpacing="100" Foreground="#5AF2DD"/>
                         </Border>
                     </StackPanel>
@@ -1961,7 +1961,7 @@
                             <Border Background="#1A3FE0C8" BorderBrush="#4D3FE0C8"
                                     BorderThickness="1" CornerRadius="6"
                                     Padding="7,2" VerticalAlignment="Center">
-                                <TextBlock Text="v1.0.0" FontFamily="Consolas" FontSize="10"
+                                <TextBlock Text="v1.0.1" FontFamily="Consolas" FontSize="10"
                                            CharacterSpacing="100" Foreground="#5AF2DD"/>
                             </Border>
                         </StackPanel>

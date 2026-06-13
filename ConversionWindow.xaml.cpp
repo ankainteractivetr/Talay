@@ -5,7 +5,7 @@
 #include "framework/GUI/Dialog/ODialogService.hpp"
 #include "framework/Core/Localization/OLocalizationService.hpp"
 #include "framework/Graphics/Conversion/OImageConverter.hpp"
-#include "framework/System/Process/ExecutablePath.hpp"
+#include "TalayPaths.hpp"
 
 #include <shtypes.h>
 #include <shobjidl_core.h>
@@ -161,7 +161,7 @@ namespace winrt::Talay::implementation
    // controls; an absent directory falls back to the source image's own folder.
    void ConversionWindow::LoadPreferences()
    {
-      m_settings = std::make_unique<OTalaySettings>(L"OTalaySettings", anka::System::Process::executableDirectory());
+      m_settings = std::make_unique<OTalaySettings>(L"OTalaySettings", talay::Paths::userDataDirectory());
       m_settings->load();
 
       selectFormat(m_settings->getConversionFormat());
