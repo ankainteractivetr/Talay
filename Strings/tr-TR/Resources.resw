@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Talay UI strings — tr-TR (Turkish). Mirror of Strings/en-US/Resources.resw;
+    every id here must also exist there (the en-US copy is the default/fallback).
+  -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ============================ Brand ============================ -->
+  <data name="BrandSubtitle.Text" xml:space="preserve">
+    <value>SU TANRISI · RESİM GÖRÜNTÜLEYİCİ</value>
+  </data>
+
+  <!-- ========================== File menu ========================== -->
+  <data name="MenuFile.Content" xml:space="preserve">
+    <value>Dosya</value>
+  </data>
+  <data name="MenuFileOpen.Text" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="MenuFileConvert.Text" xml:space="preserve">
+    <value>Dönüştür</value>
+  </data>
+  <data name="MenuFileRecent.Text" xml:space="preserve">
+    <value>Son Dosyalar</value>
+  </data>
+  <data name="MenuFileRecentEmpty.Text" xml:space="preserve">
+    <value>(Henüz dosya yok)</value>
+  </data>
+  <data name="MenuFileImportLibrary.Text" xml:space="preserve">
+    <value>Kitaplığı İçe Aktar</value>
+  </data>
+  <data name="MenuFileExportLibrary.Text" xml:space="preserve">
+    <value>Kitaplığı Dışa Aktar</value>
+  </data>
+  <data name="MenuFileShare.Text" xml:space="preserve">
+    <value>Paylaş</value>
+  </data>
+  <data name="MenuFilePrint.Text" xml:space="preserve">
+    <value>Yazdır</value>
+  </data>
+  <data name="MenuFileExit.Text" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+
+  <!-- ======================== Effects menu ======================== -->
+  <data name="MenuEffects.Content" xml:space="preserve">
+    <value>Efektler</value>
+  </data>
+  <data name="MenuEffectGrayscale.Text" xml:space="preserve">
+    <value>Gri Tonlama</value>
+  </data>
+  <data name="MenuEffectSepia.Text" xml:space="preserve">
+    <value>Sepya</value>
+  </data>
+  <data name="MenuEffectInvert.Text" xml:space="preserve">
+    <value>Negatif</value>
+  </data>
+  <data name="MenuEffectWarm.Text" xml:space="preserve">
+    <value>Sıcak</value>
+  </data>
+  <data name="MenuEffectCool.Text" xml:space="preserve">
+    <value>Soğuk</value>
+  </data>
+  <data name="MenuEffectVibrant.Text" xml:space="preserve">
+    <value>Canlı</value>
+  </data>
+  <data name="MenuEffectMuted.Text" xml:space="preserve">
+    <value>Soluk</value>
+  </data>
+  <data name="MenuEffectBrighten.Text" xml:space="preserve">
+    <value>Aydınlat</value>
+  </data>
+  <data name="MenuEffectDarken.Text" xml:space="preserve">
+    <value>Karart</value>
+  </data>
+  <data name="MenuEffectSharpen.Text" xml:space="preserve">
+    <value>Keskinleştir</value>
+  </data>
+  <data name="MenuEffectSoften.Text" xml:space="preserve">
+    <value>Yumuşat</value>
+  </data>
+  <data name="MenuEffectVignette.Text" xml:space="preserve">
+    <value>Vinyet</value>
+  </data>
+  <data name="MenuEffectSaveAs.Text" xml:space="preserve">
+    <value>Farklı Kaydet</value>
+  </data>
+  <data name="MenuEffectReset.Text" xml:space="preserve">
+    <value>Orijinale Dön</value>
+  </data>
+
+  <!-- ===================== Settings / Help menu ===================== -->
+  <data name="MenuSettings.Content" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="MenuSettingsOptions.Text" xml:space="preserve">
+    <value>Seçenekler</value>
+  </data>
+  <data name="MenuSettingsResetAll.Text" xml:space="preserve">
+    <value>Tüm Ayarları Sıfırla</value>
+  </data>
+  <data name="MenuHelp.Content" xml:space="preserve">
+    <value>Yardım</value>
+  </data>
+  <data name="MenuHelpGuide.Text" xml:space="preserve">
+    <value>Kılavuz</value>
+  </data>
+  <data name="MenuHelpSourceCode.Text" xml:space="preserve">
+    <value>Kaynak Kod</value>
+  </data>
+  <data name="MenuHelpAbout.Text" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+
+  <!-- ===================== Window control tips ===================== -->
+  <data name="MinimizeBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Küçült</value>
+  </data>
+  <data name="MaximizeBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Büyüt</value>
+  </data>
+  <data name="CloseBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+
+  <!-- ========================== Viewport ========================== -->
+  <data name="ViewportHint.Text" xml:space="preserve">
+    <value>Resim açmak için  Dosya › Aç  kullanın</value>
+  </data>
+  <data name="FsExitCaption.Text" xml:space="preserve">
+    <value>TAM EKRANDAN ÇIKIN</value>
+  </data>
+
+  <!-- ======================= Library panel ======================= -->
+  <data name="LibTitle.Text" xml:space="preserve">
+    <value>RESİM KİTAPLIĞI</value>
+  </data>
+  <data name="LibItemsLabel.Text" xml:space="preserve">
+    <value>0 öğe</value>
+  </data>
+  <data name="LibCloseBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="LibFilters.Text" xml:space="preserve">
+    <value>FİLTRELER</value>
+  </data>
+  <data name="LibFilterNameLabel.Text" xml:space="preserve">
+    <value>AD</value>
+  </data>
+  <data name="LibFilterNameBox.PlaceholderText" xml:space="preserve">
+    <value>ada göre ara...</value>
+  </data>
+  <data name="LibFilterFormatLabel.Text" xml:space="preserve">
+    <value>FORMAT</value>
+  </data>
+  <data name="LibFormatAll" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
+  <data name="LibFormatCount" xml:space="preserve">
+    <value>{} format</value>
+  </data>
+  <data name="LibFilterSizeLabel.Text" xml:space="preserve">
+    <value>BOYUT (KB)</value>
+  </data>
+  <data name="LibFilterSizeMinBox.PlaceholderText" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="LibFilterSizeMaxBox.PlaceholderText" xml:space="preserve">
+    <value>maks</value>
+  </data>
+  <data name="LibFilterDateLabel.Text" xml:space="preserve">
+    <value>TARİH</value>
+  </data>
+  <data name="LibFilterDateFromLabel.Text" xml:space="preserve">
+    <value>BAŞLANGIÇ</value>
+  </data>
+  <data name="LibFilterDateToLabel.Text" xml:space="preserve">
+    <value>BİTİŞ</value>
+  </data>
+  <data name="LibFilterDimLabel.Text" xml:space="preserve">
+    <value>BOYUTLAR (PX)</value>
+  </data>
+  <data name="LibFilterWidthLabel.Text" xml:space="preserve">
+    <value>GENİŞLİK</value>
+  </data>
+  <data name="LibFilterWidthMinBox.PlaceholderText" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="LibFilterWidthMaxBox.PlaceholderText" xml:space="preserve">
+    <value>maks</value>
+  </data>
+  <data name="LibFilterHeightLabel.Text" xml:space="preserve">
+    <value>YÜKSEKLİK</value>
+  </data>
+  <data name="LibFilterHeightMinBox.PlaceholderText" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="LibFilterHeightMaxBox.PlaceholderText" xml:space="preserve">
+    <value>maks</value>
+  </data>
+  <data name="LibFilterKindLabel.Text" xml:space="preserve">
+    <value>TÜR</value>
+  </data>
+  <data name="LibFilterStillsCheck.Content" xml:space="preserve">
+    <value>Durağan</value>
+  </data>
+  <data name="LibFilterAnimatedCheck.Content" xml:space="preserve">
+    <value>Hareketli</value>
+  </data>
+  <data name="LibFilterFolderLabel.Text" xml:space="preserve">
+    <value>KLASÖR</value>
+  </data>
+  <data name="LibFolderAll" xml:space="preserve">
+    <value>Tüm klasörler</value>
+  </data>
+  <data name="LibFilterFavoriteCheck.Content" xml:space="preserve">
+    <value>Yalnızca favoriler</value>
+  </data>
+  <data name="LibColName.Text" xml:space="preserve">
+    <value>AD</value>
+  </data>
+  <data name="LibColFormat.Text" xml:space="preserve">
+    <value>FORMAT</value>
+  </data>
+  <data name="LibColDims.Text" xml:space="preserve">
+    <value>BOYUTLAR</value>
+  </data>
+  <data name="LibColSize.Text" xml:space="preserve">
+    <value>BOYUT</value>
+  </data>
+  <data name="LibColDate.Text" xml:space="preserve">
+    <value>TARİH</value>
+  </data>
+  <data name="LibItemsCount" xml:space="preserve">
+    <value>{} öğe</value>
+  </data>
+  <data name="LibResultsCount" xml:space="preserve">
+    <value>{} sonuç</value>
+  </data>
+  <data name="LibResetBtn.Content" xml:space="preserve">
+    <value>Filtreleri Sıfırla</value>
+  </data>
+  <data name="LibResultLabel.Text" xml:space="preserve">
+    <value>0 sonuç</value>
+  </data>
+  <data name="LibDisplayTable.Content" xml:space="preserve">
+    <value>Tablo</value>
+  </data>
+  <data name="LibDisplayThumb.Content" xml:space="preserve">
+    <value>Küçük Resim</value>
+  </data>
+  <data name="LibSortDate.Content" xml:space="preserve">
+    <value>Tarihe Göre</value>
+  </data>
+  <data name="LibSortName.Content" xml:space="preserve">
+    <value>Ada Göre</value>
+  </data>
+  <data name="LibSortFormat.Content" xml:space="preserve">
+    <value>Formata Göre</value>
+  </data>
+  <data name="LibSortSize.Content" xml:space="preserve">
+    <value>Boyuta Göre</value>
+  </data>
+  <data name="LibResultsPlaceholder.Text" xml:space="preserve">
+    <value>Eşleşen görsel yok</value>
+  </data>
+  <data name="LibMenuOpen" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="LibMenuConvert" xml:space="preserve">
+    <value>Dönüştür</value>
+  </data>
+  <data name="LibMenuUnfavorite" xml:space="preserve">
+    <value>Favorilerden Kaldır</value>
+  </data>
+  <data name="LibMenuRemove" xml:space="preserve">
+    <value>Kitaplıktan Kaldır</value>
+  </data>
+  <data name="LibUpdateFailMessage" xml:space="preserve">
+    <value>Kitaplık güncellenemedi.</value>
+  </data>
+  <data name="LibHandleBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kitaplık Paneli</value>
+  </data>
+  <data name="LibHandleLabel.Text" xml:space="preserve">
+    <value>K
+İ
+T
+A
+P
+L
+I
+K</value>
+  </data>
+
+  <!-- ========================= Reel panel ========================= -->
+  <data name="ReelTitleLabel.Text" xml:space="preserve">
+    <value>KLASÖR</value>
+  </data>
+  <data name="ReelCollapseBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Klasör Paneli</value>
+  </data>
+  <data name="ReelPagePrevBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Önceki sayfa</value>
+  </data>
+  <data name="ReelPageNextBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Sonraki sayfa</value>
+  </data>
+  <data name="ReelPageLabel" xml:space="preserve">
+    <value>{} / {}</value>
+  </data>
+
+  <!-- ===================== Toolbar — left ===================== -->
+  <data name="FolderToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Klasör Raylı Paneli</value>
+  </data>
+  <data name="FolderBtnCaption.Text" xml:space="preserve">
+    <value>KLASÖR</value>
+  </data>
+  <data name="FavToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Favori</value>
+  </data>
+  <data name="FavBtnCaption.Text" xml:space="preserve">
+    <value>FAVORİ</value>
+  </data>
+  <data name="LibAddToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kitaplığa Ekle</value>
+  </data>
+  <data name="LibAddBtnCaption.Text" xml:space="preserve">
+    <value>KİTAPLIK</value>
+  </data>
+  <data name="InfoToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Dosya Bilgisi</value>
+  </data>
+  <data name="InfoBtnCaption.Text" xml:space="preserve">
+    <value>BİLGİ</value>
+  </data>
+  <data name="ChipDimensionsLabel.Text" xml:space="preserve">
+    <value>BOYUTLAR</value>
+  </data>
+  <data name="ChipSizeLabel.Text" xml:space="preserve">
+    <value>BOYUT</value>
+  </data>
+
+  <!-- ===================== Toolbar — right ===================== -->
+  <data name="RotateBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Döndür</value>
+  </data>
+  <data name="RotateBtnCaption.Text" xml:space="preserve">
+    <value>DÖNDÜR</value>
+  </data>
+  <data name="ZoomOutBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Uzaklaştır</value>
+  </data>
+  <data name="ZoomLevelLabel.Text" xml:space="preserve">
+    <value>YAKLAŞTIRMA DÜZEYİ</value>
+  </data>
+  <data name="ZoomInBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Yakınlaştır</value>
+  </data>
+  <data name="FsToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tam Ekran</value>
+  </data>
+  <data name="FsBtnCaption.Text" xml:space="preserve">
+    <value>TAM EKRAN</value>
+  </data>
+
+  <!-- ========================= Info modal ========================= -->
+  <data name="InfoModalTitle.Text" xml:space="preserve">
+    <value>DOSYA BİLGİSİ</value>
+  </data>
+  <data name="InfoLabelName.Text" xml:space="preserve">
+    <value>DOSYA ADI</value>
+  </data>
+  <data name="InfoLabelFormat.Text" xml:space="preserve">
+    <value>FORMAT</value>
+  </data>
+  <data name="InfoLabelDims.Text" xml:space="preserve">
+    <value>BOYUTLAR</value>
+  </data>
+  <data name="InfoLabelAspect.Text" xml:space="preserve">
+    <value>EN-BOY ORANI</value>
+  </data>
+  <data name="InfoLabelDepth.Text" xml:space="preserve">
+    <value>RENK PALETİ</value>
+  </data>
+  <data name="InfoLabelProfile.Text" xml:space="preserve">
+    <value>RENK PROFİLİ</value>
+  </data>
+  <data name="InfoLabelDpi.Text" xml:space="preserve">
+    <value>ÇÖZÜNÜRLÜK</value>
+  </data>
+  <data name="InfoLabelSize.Text" xml:space="preserve">
+    <value>BOYUT</value>
+  </data>
+  <data name="InfoLabelCreated.Text" xml:space="preserve">
+    <value>OLUŞTURULMA</value>
+  </data>
+  <data name="InfoLabelModified.Text" xml:space="preserve">
+    <value>DEĞİŞTİRİLME</value>
+  </data>
+  <data name="InfoLabelPath.Text" xml:space="preserve">
+    <value>YOL</value>
+  </data>
+
+  <!-- ========================= Guide modal ========================= -->
+  <data name="GuideModalTitle.Text" xml:space="preserve">
+    <value>REHBER</value>
+  </data>
+  <data name="GuideOpenTitle.Text" xml:space="preserve">
+    <value>RESİM AÇMA</value>
+  </data>
+  <data name="GuideOpenBody.Text" xml:space="preserve">
+    <value>Dosya › Aç'ı kullanın, görüntüleme alanına bir dosya bırakın ya da Gezgin'den bir resmi Talay ile açın. Son açılanlar Dosya › Son Dosyalar altında bekler.</value>
+  </data>
+  <data name="GuideReelTitle.Text" xml:space="preserve">
+    <value>KLASÖRDE GEZİNME</value>
+  </data>
+  <data name="GuideReelBody.Text" xml:space="preserve">
+    <value>Sağdaki şerit, açık resmin klasörünü sayfa sayfa listeler. Bir küçük resme tıklayarak resim değiştirin; oklar sayfa çevirir.</value>
+  </data>
+  <data name="GuideViewTitle.Text" xml:space="preserve">
+    <value>GÖRÜNÜM KONTROLLERİ</value>
+  </data>
+  <data name="GuideViewBody.Text" xml:space="preserve">
+    <value>Fare tekerleği imlecin olduğu yere yakınlaştırır, sürüklemek kaydırır. Döndürme, yakınlaştırma sürgüsü ve tam ekran alttaki araç çubuğundadır.</value>
+  </data>
+  <data name="GuideLibraryTitle.Text" xml:space="preserve">
+    <value>KİTAPLIK VE FAVORİLER</value>
+  </data>
+  <data name="GuideLibraryBody.Text" xml:space="preserve">
+    <value>Sol kenardaki tutamaç kitaplığınızı açar. +LIB açık resmi saklar, yıldız favori yapar; panel ad, biçim, boyut veya tarihe göre süzer.</value>
+  </data>
+  <data name="GuideConvertTitle.Text" xml:space="preserve">
+    <value>DÖNÜŞTÜRME VE PAYLAŞMA</value>
+  </data>
+  <data name="GuideConvertBody.Text" xml:space="preserve">
+    <value>Dosya › Dönüştür açık resmi başka bir biçimde kaydeder — Gezgin'de resimlere sağ tıklayıp Talay ile Dönüştür'ü seçmek de işe yarar. Dosya › Paylaş panoya kopyalar; Yazdır kâğıda döker.</value>
+  </data>
+
+  <!-- ========================= About modal ========================= -->
+  <data name="AboutModalTitle.Text" xml:space="preserve">
+    <value>TALAY HAKKINDA</value>
+  </data>
+  <data name="AboutModalTagline.Text" xml:space="preserve">
+    <value>SU TANRISI · RESİM GÖRÜNTÜLEYİCİ</value>
+  </data>
+  <data name="AboutModalDescription.Text" xml:space="preserve">
+    <value>Windows için resim görüntüleyici ve dönüştürücü.</value>
+  </data>
+  <data name="AboutModalCopyright.Text" xml:space="preserve">
+    <value>© 2025 AnkA Interactive</value>
+  </data>
+
+  <!-- ==================== Code-behind strings ==================== -->
+  <data name="CommonOk" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="CommonYes" xml:space="preserve">
+    <value>Evet</value>
+  </data>
+  <data name="CommonNo" xml:space="preserve">
+    <value>Hayır</value>
+  </data>
+  <data name="DialogExitTitle" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="DialogExitMessage" xml:space="preserve">
+    <value>Talay'dan çıkmak istediğinize emin misiniz?</value>
+  </data>
+  <data name="InfoNoImageTitle" xml:space="preserve">
+    <value>Dosya Bilgisi</value>
+  </data>
+  <data name="InfoNoImageMessage" xml:space="preserve">
+    <value>Önce bir resim açın, sonra Bilgi'yi seçin.</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="LinkOpenFailMessage" xml:space="preserve">
+    <value>Bağlantı tarayıcınızda açılamadı.</value>
+  </data>
+  <data name="ImageOpenFailed" xml:space="preserve">
+    <value>Resim açılamadı.</value>
+  </data>
+  <data name="RecentFileMissingTitle" xml:space="preserve">
+    <value>Dosya Bulunamadı</value>
+  </data>
+  <data name="RecentFileMissingMessage" xml:space="preserve">
+    <value>Dosya artık mevcut değil ve Son Dosyalar listesinden kaldırıldı.</value>
+  </data>
+
+  <!-- ====================== Conversion window ====================== -->
+  <data name="ConvTitle.Text" xml:space="preserve">
+    <value>RESİM DÖNÜŞTÜR</value>
+  </data>
+  <data name="ConvCloseBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="ConvFormatLabel.Text" xml:space="preserve">
+    <value>DÖNÜŞTÜRÜLECEK BİÇİM</value>
+  </data>
+  <data name="ConvNameLabel.Text" xml:space="preserve">
+    <value>YENİ RESİM ADI</value>
+  </data>
+  <data name="ConvOutputLabel.Text" xml:space="preserve">
+    <value>ÇIKIŞ DİZİNİ</value>
+  </data>
+  <data name="ConvBrowseBtn.Content" xml:space="preserve">
+    <value>Gözat</value>
+  </data>
+  <data name="ConvCancelBtn.Content" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="ConvConvertBtn.Content" xml:space="preserve">
+    <value>Dönüştür</value>
+  </data>
+
+  <!-- ================ Conversion code-behind strings ============== -->
+  <data name="ConvertNoImageTitle" xml:space="preserve">
+    <value>Dönüştür</value>
+  </data>
+  <data name="ConvertNoImageMessage" xml:space="preserve">
+    <value>Önce bir resim açın, sonra Dönüştür'ü seçin.</value>
+  </data>
+  <data name="ConvertInvalidTitle" xml:space="preserve">
+    <value>Dönüştür</value>
+  </data>
+  <data name="ConvertInvalidMessage" xml:space="preserve">
+    <value>Lütfen bir dosya adı ve çıkış dizini girin.</value>
+  </data>
+  <data name="ConvertDoneTitle" xml:space="preserve">
+    <value>Dönüştürme Tamamlandı</value>
+  </data>
+  <data name="ConvertDoneMessage" xml:space="preserve">
+    <value>Resim başarıyla dönüştürüldü.</value>
+  </data>
+  <data name="ConvertFailedMessage" xml:space="preserve">
+    <value>Resim dönüştürülemedi.</value>
+  </data>
+
+  <!-- =================== Print code-behind strings ================ -->
+  <data name="PrintNoImageTitle" xml:space="preserve">
+    <value>Yazdır</value>
+  </data>
+  <data name="PrintNoImageMessage" xml:space="preserve">
+    <value>Önce bir resim açın, sonra Yazdır'ı seçin.</value>
+  </data>
+  <data name="PrintFailTitle" xml:space="preserve">
+    <value>Yazdır</value>
+  </data>
+  <data name="PrintFailMessage" xml:space="preserve">
+    <value>Resim yazdırılamadı.</value>
+  </data>
+
+  <!-- =================== Share code-behind strings ================ -->
+  <data name="ShareNoImageTitle" xml:space="preserve">
+    <value>Paylaş</value>
+  </data>
+  <data name="ShareNoImageMessage" xml:space="preserve">
+    <value>Önce bir resim açın, sonra Paylaş'ı seçin.</value>
+  </data>
+  <data name="ShareDoneTitle" xml:space="preserve">
+    <value>Paylaş</value>
+  </data>
+  <data name="ShareDoneMessage" xml:space="preserve">
+    <value>Resim panoya kopyalandı. Artık herhangi bir uygulamaya yapıştırabilirsiniz.</value>
+  </data>
+  <data name="ShareFailTitle" xml:space="preserve">
+    <value>Paylaş</value>
+  </data>
+  <data name="ShareFailMessage" xml:space="preserve">
+    <value>Resim panoya kopyalanamadı.</value>
+  </data>
+  <data name="ShareChoiceTitle" xml:space="preserve">
+    <value>Paylaş</value>
+  </data>
+  <data name="ShareChoiceMessage" xml:space="preserve">
+    <value>Bu resme bir efekt uygulanmış durumda. Hangi sürümü paylaşmak istersiniz?</value>
+  </data>
+
+  <!-- ============ Effect-version choice captions (Share + Save As) ========== -->
+  <data name="ChoiceWithEffect" xml:space="preserve">
+    <value>Efektli</value>
+  </data>
+  <data name="ChoiceOriginal" xml:space="preserve">
+    <value>Orijinal</value>
+  </data>
+  <data name="ChoiceCancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+
+  <!-- =================== Save As code-behind strings ================ -->
+  <data name="SaveAsNoImageTitle" xml:space="preserve">
+    <value>Farklı Kaydet</value>
+  </data>
+  <data name="SaveAsNoImageMessage" xml:space="preserve">
+    <value>Önce bir resim açın, sonra Farklı Kaydet'i seçin.</value>
+  </data>
+  <data name="SaveAsDoneTitle" xml:space="preserve">
+    <value>Farklı Kaydet</value>
+  </data>
+  <data name="SaveAsDoneMessage" xml:space="preserve">
+    <value>Resim kaydedildi.</value>
+  </data>
+  <data name="SaveAsFailTitle" xml:space="preserve">
+    <value>Farklı Kaydet</value>
+  </data>
+  <data name="SaveAsFailMessage" xml:space="preserve">
+    <value>Resim kaydedilemedi.</value>
+  </data>
+
+  <!-- =================== Effects code-behind strings ================ -->
+  <data name="EffectNoImageTitle" xml:space="preserve">
+    <value>Efektler</value>
+  </data>
+  <data name="EffectNoImageMessage" xml:space="preserve">
+    <value>Önce bir resim açın, sonra bir efekt seçin.</value>
+  </data>
+
+  <!-- ================ Library import / export strings ============== -->
+  <data name="LibDumpTypeName" xml:space="preserve">
+    <value>SQL dökümü</value>
+  </data>
+  <data name="LibImportTitle" xml:space="preserve">
+    <value>Kitaplığı İçe Aktar</value>
+  </data>
+  <data name="LibImportDoneMessage" xml:space="preserve">
+    <value>İçe aktarma tamamlandı: {} eklendi, {} zaten kitaplıkta, {} atlandı (dosya bulunamadı).</value>
+  </data>
+  <data name="LibImportFailMessage" xml:space="preserve">
+    <value>Döküm dosyası içe aktarılamadı.</value>
+  </data>
+  <data name="LibExportTitle" xml:space="preserve">
+    <value>Kitaplığı Dışa Aktar</value>
+  </data>
+  <data name="LibExportDoneMessage" xml:space="preserve">
+    <value>Kitaplık dışa aktarıldı.</value>
+  </data>
+  <data name="LibExportFailMessage" xml:space="preserve">
+    <value>Kitaplık dışa aktarılamadı.</value>
+  </data>
+
+  <!-- ================ Library pager bar ============== -->
+  <data name="LibPageLabel" xml:space="preserve">
+    <value>{} / {}</value>
+  </data>
+  <data name="LibPageSizeBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Sayfa başına sonuç</value>
+  </data>
+  <data name="LibPagePrevBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Önceki sayfa</value>
+  </data>
+  <data name="LibPageNextBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Sonraki sayfa</value>
+  </data>
+
+  <!-- ===================== Conversion — source / batch ===================== -->
+  <data name="ConvSourceLabel.Text" xml:space="preserve">
+    <value>KAYNAK</value>
+  </data>
+  <data name="ConvSourceCount" xml:space="preserve">
+    <value>{0} dosya seçildi</value>
+  </data>
+  <data name="ConvNameBatch" xml:space="preserve">
+    <value>(özgün adlar korunur)</value>
+  </data>
+  <data name="ConvertBatchDoneMessage" xml:space="preserve">
+    <value>{0} görselin tümü başarıyla dönüştürüldü.</value>
+  </data>
+  <data name="ConvertBatchPartialMessage" xml:space="preserve">
+    <value>{1} görselden {0} tanesi dönüştürüldü. Kalanlar okunamadı veya yazılamadı.</value>
+  </data>
+
+  <!-- ===================== Settings modal ===================== -->
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>AYARLAR</value>
+  </data>
+  <data name="SettingsSectionGeneral" xml:space="preserve">
+    <value>GENEL</value>
+  </data>
+  <data name="SettingsSectionFileTypes" xml:space="preserve">
+    <value>DOSYA TÜRLERİ</value>
+  </data>
+  <data name="SettingsSectionLibrary" xml:space="preserve">
+    <value>KİTAPLIK</value>
+  </data>
+  <data name="SettingsLanguageLabel" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="SettingsLangAuto" xml:space="preserve">
+    <value>Sistem varsayılanı</value>
+  </data>
+  <data name="SettingsLangTurkish" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="SettingsLangEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="SettingsAlwaysOnTop" xml:space="preserve">
+    <value>Talay'ı diğer pencerelerin üstünde tut</value>
+  </data>
+  <data name="SettingsRegisterTypes" xml:space="preserve">
+    <value>Talay'ı desteklenen görsel biçimleri için kaydet</value>
+  </data>
+  <data name="SettingsRegisterTypesHint" xml:space="preserve">
+    <value>Talay, desteklenen tüm görsel dosyaları için "Birlikte aç" menüsünde ve Varsayılan Uygulamalar sayfasında görünür. Varsayılan uygulama onayını Windows kendisi ister.</value>
+  </data>
+  <data name="SettingsAutoAdd" xml:space="preserve">
+    <value>Açılan görselleri kitaplığa otomatik ekle</value>
+  </data>
+  <data name="SettingsResetLibraryBtn" xml:space="preserve">
+    <value>Kitaplığı sıfırla…</value>
+  </data>
+  <data name="SettingsSave" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="SettingsCancel" xml:space="preserve">
+    <value>Vazgeç</value>
+  </data>
+  <data name="SettingsDefaults" xml:space="preserve">
+    <value>Varsayılanlar</value>
+  </data>
+  <data name="SettingsRestartTitle" xml:space="preserve">
+    <value>Talay'ı Yeniden Başlat</value>
+  </data>
+  <data name="SettingsRestartMessage" xml:space="preserve">
+    <value>Dil değişikliği yeniden başlatmadan sonra geçerli olur. Şimdi yeniden başlatılsın mı?</value>
+  </data>
+  <data name="SettingsResetLibTitle" xml:space="preserve">
+    <value>Kitaplığı Sıfırla</value>
+  </data>
+  <data name="SettingsResetLibWarnMessage" xml:space="preserve">
+    <value>Bu işlem kitaplığınızdaki {0} kaydın tümünü, favoriler dahil, kalıcı olarak siler. Diskinizdeki görsel dosyaları SİLİNMEZ. Devam edilsin mi?</value>
+  </data>
+  <data name="SettingsResetLibDoneMessage" xml:space="preserve">
+    <value>Kitaplık sıfırlandı.</value>
+  </data>
+  <data name="SettingsResetLibFailMessage" xml:space="preserve">
+    <value>Kitaplık sıfırlanamadı.</value>
+  </data>
+  <data name="SettingsResetAllTitle" xml:space="preserve">
+    <value>Tüm Ayarları Sıfırla</value>
+  </data>
+  <data name="SettingsResetAllMessage" xml:space="preserve">
+    <value>Bu, tüm ayarları varsayılanlarına döndürür — dil, pencere boyutu ve konumu, her zaman üstte ve dosya türü seçenekleri, dönüştürme biçimi ve klasörü. Kitaplığınız ve görsel dosyalarınız etkilenmez. Devam edilsin mi?</value>
+  </data>
+  <data name="SettingsResetAllDoneMessage" xml:space="preserve">
+    <value>Tüm ayarlar varsayılanlarına sıfırlandı.</value>
+  </data>
+
+  <!-- ===================== Shell integration ===================== -->
+  <data name="ShellAppDescription" xml:space="preserve">
+    <value>Talay Görsel Görüntüleyici ve Dönüştürücü</value>
+  </data>
+  <data name="ShellConvertVerb" xml:space="preserve">
+    <value>Talay ile Dönüştür</value>
+  </data>
+</root>

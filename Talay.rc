@@ -1,0 +1,8 @@
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// Icon
+//
+// Windows Explorer uses the lowest-ID icon resource as the executable's icon,
+// and WinUI 3 reuses the embedded exe icon for the window title bar and taskbar.
+IDI_TALAY ICON "Assets\\talay-icon.ico"

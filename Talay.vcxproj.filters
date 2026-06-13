@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="framework">
+      <UniqueIdentifier>{a7c31b58-4d2e-4f96-8b0a-6e1d29c47f53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core">
+      <UniqueIdentifier>{d1a779ed-3262-4700-a8b1-1544b692d3b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\Error">
+      <UniqueIdentifier>{f43ac198-04b8-4608-aa1d-d96b6541842d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\Error\Exception">
+      <UniqueIdentifier>{f3d9e38b-9c10-41bd-ae87-7aa3eea97dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\Error\ExceptionHandler">
+      <UniqueIdentifier>{9db5eea0-47f8-47ec-ab00-cc28513ca1a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\IO">
+      <UniqueIdentifier>{47b5f83e-79a2-4d14-9fb1-8c2ad05052b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\IO\File">
+      <UniqueIdentifier>{42c0409d-d176-4388-8048-2244bb997520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\IO\FilePicker">
+      <UniqueIdentifier>{bdd31ebd-6f73-4da4-a68c-341c6bf9b05a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\IO\Folder">
+      <UniqueIdentifier>{7a1c4e92-83d6-4b15-9c08-2e5f7a9d3b41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\Database">
+      <UniqueIdentifier>{c5e8f2a1-4b6d-4e93-8f07-1a2b3c4d5e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\Paging">
+      <UniqueIdentifier>{e9b1d4c7-2a58-4f06-9c3b-8d7e0f1a2b65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\RecentFiles">
+      <UniqueIdentifier>{4d7f2a9c-8b35-4e61-a0d8-6c1e9f3b5a72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\Localization">
+      <UniqueIdentifier>{6e2c1f8a-3b94-4d5e-8a17-9c0b2d4e6f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\Object">
+      <UniqueIdentifier>{53df9403-ed72-407a-b5d9-7bd5a4863f18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Core\Settings">
+      <UniqueIdentifier>{5b8e2a9c-1f47-4c03-9d6b-3a7e0c52d814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Graphics">
+      <UniqueIdentifier>{9555022f-d420-4088-90bd-d647563310b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Graphics\Bitmap">
+      <UniqueIdentifier>{a4e7c218-6d59-44b0-9f3a-7c1e2b8d4f60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Graphics\Conversion">
+      <UniqueIdentifier>{e7a4c0d2-5f1b-4a86-9c3e-2d7b8f0a1c63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Graphics\Image">
+      <UniqueIdentifier>{c8f3a91e-2b47-4d6a-9e15-3a8b7c0d2e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Graphics\Print">
+      <UniqueIdentifier>{5d8f3c20-7a4e-49b6-8c1d-2e9a60b7f435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Graphics\Effect">
+      <UniqueIdentifier>{7e5c9a30-4d8f-4b21-a6e3-1f0b8c2d9e57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Graphics\Renderer">
+      <UniqueIdentifier>{73da5f73-d24b-496a-a01f-c492be793c63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\Graphics\Resource">
+      <UniqueIdentifier>{2b6f1a4d-9c3e-4d77-8b21-5f0a6e8c1d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\GUI">
+      <UniqueIdentifier>{9e4f7a21-6c58-4b3d-a1f0-8d2b5e96c437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\GUI\Dialog">
+      <UniqueIdentifier>{7b1e0d92-5c43-4f8a-bd16-2a9c3e7f04d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\GUI\DragDrop">
+      <UniqueIdentifier>{3f8b2c61-7a4d-4e29-9c05-b6d18e3a72f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\GUI\Menu">
+      <UniqueIdentifier>{bbf67dac-12d9-4b43-9d53-f3c7af1c9bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\GUI\Presentation">
+      <UniqueIdentifier>{6c1d8a37-2e94-4f05-b8a1-3d7e6c2b9f48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\GUI\Viewport">
+      <UniqueIdentifier>{4e2a7d05-9c81-4b36-a0f7-1d8c6b3e94a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\GUI\Cursor">
+      <UniqueIdentifier>{7b3e9c12-4a85-4f60-9d27-3c1e8a5b6f04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\System">
+      <UniqueIdentifier>{18236ce9-837c-467a-9dfe-2dec4393c589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\System\Windows">
+      <UniqueIdentifier>{b1bbcd2f-ebd6-492c-9179-c60c0c0d485b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\System\Shell">
+      <UniqueIdentifier>{8f3c2a91-5b6e-4d07-9a3f-1c8e74b2d650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\System\Clipboard">
+      <UniqueIdentifier>{021c2623-dbbc-4b6f-8f90-358187602dce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\System\Instance">
+      <UniqueIdentifier>{2e9d47c3-81fa-4b29-b7d5-93a6c0e15f84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\System\Time">
+      <UniqueIdentifier>{92a3849c-334e-487e-91ad-fdae16c1c589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\System\Process">
+      <UniqueIdentifier>{354edb97-f31b-4fd4-86e7-f6a9dee9b6a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Formats">
+      <UniqueIdentifier>{1a5e8c47-9d20-4b63-bf91-3e7a62d80c55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Launch">
+      <UniqueIdentifier>{6c1f9b2d-e483-45a7-92b8-507d3fae61c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Links">
+      <UniqueIdentifier>{8f2f66d8-ee22-45bd-ba22-9917670a15e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shell">
+      <UniqueIdentifier>{d97a40e5-31bc-4f68-a2d4-86c5b9e0732f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Settings">
+      <UniqueIdentifier>{b4a8e1f6-2c93-47d0-8657-fd1e0a92c374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{2f9c4d61-8a07-4b3e-9d52-0e6f1a7c8b34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Dialog">
+      <UniqueIdentifier>{d4fda695-ce87-4a4b-bc7e-8034aadc1c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Library">
+      <UniqueIdentifier>{d19bb2d9-9800-4dd2-8191-ccdd889a8030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Reel">
+      <UniqueIdentifier>{8a3f5d21-7c64-4e09-b1d8-2f7a6c3e9b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{8f232005-ce9a-4e76-93d5-45925a234a88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Filter">
+      <UniqueIdentifier>{54f344c1-4b76-4de0-b2e5-690a958e0296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Store">
+      <UniqueIdentifier>{569d555c-54c4-4922-8332-5675fccc6abd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Transfer">
+      <UniqueIdentifier>{0d4a7b3e-9f12-4c85-a6d0-7e8b1c2f3a94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Localization">
+      <UniqueIdentifier>{3f9a7c14-6b28-4e05-9d31-8c2a6f4b1e73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Print">
+      <UniqueIdentifier>{a1c6e845-2d97-4b30-9f5e-7c4d18a2b690}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Share">
+      <UniqueIdentifier>{869d7875-7728-4f72-bf9f-4e0e6bf0bd55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects">
+      <UniqueIdentifier>{c2a91f64-3e07-4d58-b8a2-5d6e0c4f7b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Save">
+      <UniqueIdentifier>{f8d24b71-6a95-4c30-8e1d-9b3a5c7e0f42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Settings">
+      <UniqueIdentifier>{95b26fee-5651-4ec3-89c9-9965fdb98490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{1e0fa8b2-bc99-4fdb-9d72-f42669fa50d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Strings">
+      <UniqueIdentifier>{2c7d9e51-4f80-4a36-9b12-7e3a5c8d0f64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Styles">
+      <UniqueIdentifier>{3d6a8f14-9e2b-47c0-8155-6b0c2d9e7a41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml" />
+    <Page Include="ConversionWindow.xaml" />
+    <Page Include="Styles\Theme.xaml">
+      <Filter>Styles</Filter>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="OCursorHost.idl">
+      <Filter>GUI</Filter>
+    </Midl>
+    <Midl Include="MainWindow.idl" />
+    <Midl Include="ConversionWindow.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="framework\Core\Error\Exception\OException.cpp">
+      <Filter>framework\Core\Error\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\Error\ExceptionHandler\OExceptionHandler.cpp">
+      <Filter>framework\Core\Error\ExceptionHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\IO\File\IFile.cpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\IO\File\OFile.cpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\IO\File\OIniFile.cpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\IO\File\OTextFile.cpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\IO\FilePicker\OFilePicker.cpp">
+      <Filter>framework\Core\IO\FilePicker</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\IO\Folder\OFolderImageScanner.cpp">
+      <Filter>framework\Core\IO\Folder</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\IO\Folder\KnownFolders.cpp">
+      <Filter>framework\Core\IO\Folder</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\System\Time\UnixTime.cpp">
+      <Filter>framework\System\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\System\Process\ExecutablePath.cpp">
+      <Filter>framework\System\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalizedDialog.cpp">
+      <Filter>GUI\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\Localization\OLocalizationService.cpp">
+      <Filter>framework\Core\Localization</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\Object\OObject.cpp">
+      <Filter>framework\Core\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\Settings\OProgramSettings.cpp">
+      <Filter>framework\Core\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Bitmap\OBitmapFactory.cpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Bitmap\OContinuousBitmap.cpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Bitmap\OStillBitmap.cpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Bitmap\OSurfaceBitmapFactory.cpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Conversion\OImageConverter.cpp">
+      <Filter>framework\Graphics\Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Image\ImageInfoText.cpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Image\OFreeImageDecoder.cpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Image\OFreeImageEncoder.cpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Image\OImageFileReader.cpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Image\OImageMetadataReader.cpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Image\OWicImageDecoder.cpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Image\OWicImageThumbnailer.cpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Renderer\ORenderer.cpp">
+      <Filter>framework\Graphics\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Resource\OGraphicsResourceKeeper.cpp">
+      <Filter>framework\Graphics\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\DragDrop\OFileDropTarget.cpp">
+      <Filter>framework\GUI\DragDrop</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Dialog\ODialogService.cpp">
+      <Filter>framework\GUI\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Menu\OMenuFactory.cpp">
+      <Filter>framework\GUI\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Menu\ORecentFilesMenu.cpp">
+      <Filter>framework\GUI\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Presentation\BitmapConversion.cpp">
+      <Filter>framework\GUI\Presentation</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Presentation\OImagePresenter.cpp">
+      <Filter>framework\GUI\Presentation</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Viewport\OFitOrNativeFraming.cpp">
+      <Filter>framework\GUI\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Viewport\OImageViewport.cpp">
+      <Filter>framework\GUI\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Cursor\OClickableCursorRule.cpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Cursor\OViewportDragCursorRule.cpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\GUI\Cursor\OHoverCursorController.cpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="OFolderReel.cpp">
+      <Filter>GUI\Reel</Filter>
+    </ClCompile>
+    <ClCompile Include="OLibraryPanel.cpp">
+      <Filter>GUI\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="OImageLibrary.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="OLibraryReconciler.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="OCursorHost.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="OEntrySpecifications.cpp">
+      <Filter>Library\Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="OSpecificationFactory.cpp">
+      <Filter>Library\Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="OSqliteLibraryStore.cpp">
+      <Filter>Library\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="OLibraryTransfer.cpp">
+      <Filter>Library\Transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\Database\OSqliteDatabase.cpp">
+      <Filter>framework\Core\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\RecentFiles\OSqliteRecentFilesStore.cpp">
+      <Filter>framework\Core\RecentFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Core\RecentFiles\ORecentFilesTracker.cpp">
+      <Filter>framework\Core\RecentFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="OSystemLanguageDetector.cpp">
+      <Filter>Localization</Filter>
+    </ClCompile>
+    <ClCompile Include="OTalaySettings.cpp">
+      <Filter>Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="OSettingsPresenter.cpp">
+      <Filter>Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="OPrintPresenter.cpp">
+      <Filter>Print</Filter>
+    </ClCompile>
+    <ClCompile Include="OSharePresenter.cpp">
+      <Filter>Share</Filter>
+    </ClCompile>
+    <ClCompile Include="OEffectCatalog.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="OSaveAsPresenter.cpp">
+      <Filter>Save</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Effect\ColorMatrixPresets.cpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Effect\OColorMatrixEffect.cpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Effect\LutPresets.cpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Effect\OLutEffect.cpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Effect\KernelPresets.cpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Effect\OConvolutionEffect.cpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Effect\OVignetteEffect.cpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Effect\EffectApplication.cpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\System\Clipboard\OImageClipboard.cpp">
+      <Filter>framework\System\Clipboard</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Graphics\Print\OImagePrinter.cpp">
+      <Filter>framework\Graphics\Print</Filter>
+    </ClCompile>
+    <ClCompile Include="OSettingsDialog.cpp">
+      <Filter>GUI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="LaunchRequest.cpp">
+      <Filter>Launch</Filter>
+    </ClCompile>
+    <ClCompile Include="TalayShell.cpp">
+      <Filter>Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="OShellIntegration.cpp">
+      <Filter>Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\System\Shell\OLinkOpener.cpp">
+      <Filter>framework\System\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\System\Shell\OShellRegistrar.cpp">
+      <Filter>framework\System\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\System\Instance\OInstanceChannel.cpp">
+      <Filter>framework\System\Instance</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="framework\Core\Error\Exception\IException.hpp">
+      <Filter>framework\Core\Error\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Error\Exception\OException.hpp">
+      <Filter>framework\Core\Error\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Error\ExceptionHandler\IExceptionHandler.hpp">
+      <Filter>framework\Core\Error\ExceptionHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Error\ExceptionHandler\OExceptionHandler.hpp">
+      <Filter>framework\Core\Error\ExceptionHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\File\IFile.hpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\File\IIniFile.hpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\File\ITextFile.hpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\File\OFile.hpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\File\OIniFile.hpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\File\OTextFile.hpp">
+      <Filter>framework\Core\IO\File</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\FilePicker\IFilePicker.hpp">
+      <Filter>framework\Core\IO\FilePicker</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\FilePicker\OFilePicker.hpp">
+      <Filter>framework\Core\IO\FilePicker</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\Folder\IFolderImageScanner.hpp">
+      <Filter>framework\Core\IO\Folder</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\Folder\KnownFolders.hpp">
+      <Filter>framework\Core\IO\Folder</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\IO\Folder\OFolderImageScanner.hpp">
+      <Filter>framework\Core\IO\Folder</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Localization\ILocalizationService.hpp">
+      <Filter>framework\Core\Localization</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Localization\OLocalizationService.hpp">
+      <Filter>framework\Core\Localization</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Object\IObject.hpp">
+      <Filter>framework\Core\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Object\ObjectIdentity.hpp">
+      <Filter>framework\Core\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Object\OObject.hpp">
+      <Filter>framework\Core\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Settings\IProgramSettings.hpp">
+      <Filter>framework\Core\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Settings\OProgramSettings.hpp">
+      <Filter>framework\Core\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Surface.hpp">
+      <Filter>framework\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Bitmap\IBitmapFactory.hpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Bitmap\ISurfaceBitmap.hpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Bitmap\ISurfaceBitmapFactory.hpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Bitmap\OBitmapFactory.hpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Bitmap\OContinuousBitmap.hpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Bitmap\OStillBitmap.hpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Bitmap\OSurfaceBitmapFactory.hpp">
+      <Filter>framework\Graphics\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Conversion\ConversionRequest.hpp">
+      <Filter>framework\Graphics\Conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Conversion\IImageConverter.hpp">
+      <Filter>framework\Graphics\Conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Conversion\OImageConverter.hpp">
+      <Filter>framework\Graphics\Conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\DecodedImage.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\IImageDecoder.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\IImageEncoder.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\IImageFileReader.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\IImageMetadataReader.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\IImageThumbnailer.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\ImageFrame.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\ImageInfoText.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\ImageMetadata.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\ImageSequence.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\OFreeImageDecoder.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\OFreeImageEncoder.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\OImageFileReader.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\OImageMetadataReader.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\OWicImageDecoder.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Image\OWicImageThumbnailer.hpp">
+      <Filter>framework\Graphics\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Renderer\IRenderer.hpp">
+      <Filter>framework\Graphics\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Renderer\ORenderer.hpp">
+      <Filter>framework\Graphics\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Resource\IGraphicsResourceKeeper.hpp">
+      <Filter>framework\Graphics\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Resource\OGraphicsResourceKeeper.hpp">
+      <Filter>framework\Graphics\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\DragDrop\IFileDropTarget.hpp">
+      <Filter>framework\GUI\DragDrop</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\DragDrop\OFileDropTarget.hpp">
+      <Filter>framework\GUI\DragDrop</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Dialog\DialogRequest.hpp">
+      <Filter>framework\GUI\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Dialog\IDialogService.hpp">
+      <Filter>framework\GUI\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Dialog\ODialogService.hpp">
+      <Filter>framework\GUI\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Menu\IMenuFactory.hpp">
+      <Filter>framework\GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Menu\MenuCommand.hpp">
+      <Filter>framework\GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Menu\OMenuFactory.hpp">
+      <Filter>framework\GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Menu\IRecentFilesMenu.hpp">
+      <Filter>framework\GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Menu\ORecentFilesMenu.hpp">
+      <Filter>framework\GUI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Presentation\BitmapConversion.hpp">
+      <Filter>framework\GUI\Presentation</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Presentation\IImagePresenter.hpp">
+      <Filter>framework\GUI\Presentation</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Presentation\OImagePresenter.hpp">
+      <Filter>framework\GUI\Presentation</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Viewport\Extent.hpp">
+      <Filter>framework\GUI\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Viewport\IFramingPolicy.hpp">
+      <Filter>framework\GUI\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Viewport\IImageViewport.hpp">
+      <Filter>framework\GUI\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Viewport\OFitOrNativeFraming.hpp">
+      <Filter>framework\GUI\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Viewport\OImageViewport.hpp">
+      <Filter>framework\GUI\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Viewport\PanBounds.hpp">
+      <Filter>framework\GUI\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Cursor\CursorShape.hpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Cursor\ICursorRule.hpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Cursor\OClickableCursorRule.hpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Cursor\OViewportDragCursorRule.hpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Cursor\IHoverCursorController.hpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\GUI\Cursor\OHoverCursorController.hpp">
+      <Filter>framework\GUI\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Windows\windows.hpp">
+      <Filter>framework\System\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Time\UnixTime.hpp">
+      <Filter>framework\System\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Process\ExecutablePath.hpp">
+      <Filter>framework\System\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalizedDialog.hpp">
+      <Filter>GUI\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="IFolderReel.hpp">
+      <Filter>GUI\Reel</Filter>
+    </ClInclude>
+    <ClInclude Include="ReelControls.hpp">
+      <Filter>GUI\Reel</Filter>
+    </ClInclude>
+    <ClInclude Include="OFolderReel.hpp">
+      <Filter>GUI\Reel</Filter>
+    </ClInclude>
+    <ClInclude Include="ILibraryPanel.hpp">
+      <Filter>GUI\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="LibraryPanelControls.hpp">
+      <Filter>GUI\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="OLibraryPanel.hpp">
+      <Filter>GUI\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="IImageLibrary.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="LibraryEntry.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="LibraryFilter.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="OImageLibrary.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="ILibraryReconciler.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="OLibraryReconciler.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="OCursorHost.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Range.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="IEntrySpecification.hpp">
+      <Filter>Library\Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="OEntrySpecifications.hpp">
+      <Filter>Library\Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="OSpecificationFactory.hpp">
+      <Filter>Library\Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="ILibraryStore.hpp">
+      <Filter>Library\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="OSqliteLibraryStore.hpp">
+      <Filter>Library\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="LibrarySchema.hpp">
+      <Filter>Library\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="ILibraryTransfer.hpp">
+      <Filter>Library\Transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="OLibraryTransfer.hpp">
+      <Filter>Library\Transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Database\IStatement.hpp">
+      <Filter>framework\Core\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Database\IDatabase.hpp">
+      <Filter>framework\Core\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Database\OSqliteDatabase.hpp">
+      <Filter>framework\Core\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\Paging\Pager.hpp">
+      <Filter>framework\Core\Paging</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\RecentFiles\RecentFile.hpp">
+      <Filter>framework\Core\RecentFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\RecentFiles\RecentFilesSchema.hpp">
+      <Filter>framework\Core\RecentFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\RecentFiles\IRecentFilesStore.hpp">
+      <Filter>framework\Core\RecentFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\RecentFiles\OSqliteRecentFilesStore.hpp">
+      <Filter>framework\Core\RecentFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\RecentFiles\IRecentFilesTracker.hpp">
+      <Filter>framework\Core\RecentFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Core\RecentFiles\ORecentFilesTracker.hpp">
+      <Filter>framework\Core\RecentFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="ILanguageDetector.hpp">
+      <Filter>Localization</Filter>
+    </ClInclude>
+    <ClInclude Include="Language.hpp">
+      <Filter>Localization</Filter>
+    </ClInclude>
+    <ClInclude Include="OSystemLanguageDetector.hpp">
+      <Filter>Localization</Filter>
+    </ClInclude>
+    <ClInclude Include="ITalaySettings.hpp">
+      <Filter>Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="OTalaySettings.hpp">
+      <Filter>Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsState.hpp">
+      <Filter>Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="ISettingsPresenter.hpp">
+      <Filter>Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="OSettingsPresenter.hpp">
+      <Filter>Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="IPrintPresenter.hpp">
+      <Filter>Print</Filter>
+    </ClInclude>
+    <ClInclude Include="OPrintPresenter.hpp">
+      <Filter>Print</Filter>
+    </ClInclude>
+    <ClInclude Include="ISharePresenter.hpp">
+      <Filter>Share</Filter>
+    </ClInclude>
+    <ClInclude Include="OSharePresenter.hpp">
+      <Filter>Share</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectKind.hpp">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="IEffectCatalog.hpp">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="OEffectCatalog.hpp">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="ISaveAsPresenter.hpp">
+      <Filter>Save</Filter>
+    </ClInclude>
+    <ClInclude Include="OSaveAsPresenter.hpp">
+      <Filter>Save</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\PixelView.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\PixelCodec.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\LookupTable.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\LutPresets.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\OLutEffect.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\ConvolutionKernel.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\KernelPresets.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\OConvolutionEffect.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\OVignetteEffect.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\IPixelEffect.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\ColorMatrix.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\ColorMatrixPresets.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\OColorMatrixEffect.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Effect\EffectApplication.hpp">
+      <Filter>framework\Graphics\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Clipboard\IImageClipboard.hpp">
+      <Filter>framework\System\Clipboard</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Clipboard\OImageClipboard.hpp">
+      <Filter>framework\System\Clipboard</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Print\PrintRequest.hpp">
+      <Filter>framework\Graphics\Print</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Print\PageFitting.hpp">
+      <Filter>framework\Graphics\Print</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Print\IImagePrinter.hpp">
+      <Filter>framework\Graphics\Print</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Graphics\Print\OImagePrinter.hpp">
+      <Filter>framework\Graphics\Print</Filter>
+    </ClInclude>
+    <ClInclude Include="OSettingsDialog.hpp">
+      <Filter>GUI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageFormats.hpp">
+      <Filter>Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="LaunchRequest.hpp">
+      <Filter>Launch</Filter>
+    </ClInclude>
+    <ClInclude Include="TalayLinks.hpp">
+      <Filter>Links</Filter>
+    </ClInclude>
+    <ClInclude Include="TalayShell.hpp">
+      <Filter>Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="IShellIntegration.hpp">
+      <Filter>Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="OShellIntegration.hpp">
+      <Filter>Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Shell\ILinkOpener.hpp">
+      <Filter>framework\System\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Shell\OLinkOpener.hpp">
+      <Filter>framework\System\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Shell\IShellRegistrar.hpp">
+      <Filter>framework\System\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Shell\OShellRegistrar.hpp">
+      <Filter>framework\System\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Instance\IInstanceChannel.hpp">
+      <Filter>framework\System\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\System\Instance\OInstanceChannel.hpp">
+      <Filter>framework\System\Instance</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-US\Resources.resw">
+      <Filter>Strings</Filter>
+    </PRIResource>
+    <PRIResource Include="Strings\tr-TR\Resources.resw">
+      <Filter>Strings</Filter>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-16.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-16_altform-lightunplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-16_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-lightunplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-256.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-256_altform-lightunplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-256_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-32.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-32_altform-lightunplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-32_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-48.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-48_altform-lightunplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natstepfilter" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Talay.rc" />
+  </ItemGroup>
+</Project>

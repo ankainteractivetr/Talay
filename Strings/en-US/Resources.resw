@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Talay UI strings — en-US (default / fallback language).
+
+    Two kinds of entries:
+      * x:Uid property identifiers (Name = "<Uid>.<Property>") localize XAML.
+      * Plain identifiers (no dot) are loaded from code via
+        anka::Core::Localization::OLocalizationService::text(L"<Name>").
+    Every id must also exist in Strings/tr-TR/Resources.resw.
+  -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ============================ Brand ============================ -->
+  <data name="BrandSubtitle.Text" xml:space="preserve">
+    <value>WATER GOD · IMAGE VIEWER</value>
+  </data>
+
+  <!-- ========================== File menu ========================== -->
+  <data name="MenuFile.Content" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="MenuFileOpen.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="MenuFileConvert.Text" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="MenuFileRecent.Text" xml:space="preserve">
+    <value>Recent Files</value>
+  </data>
+  <data name="MenuFileRecentEmpty.Text" xml:space="preserve">
+    <value>(No files yet)</value>
+  </data>
+  <data name="MenuFileImportLibrary.Text" xml:space="preserve">
+    <value>Import Library</value>
+  </data>
+  <data name="MenuFileExportLibrary.Text" xml:space="preserve">
+    <value>Export Library</value>
+  </data>
+  <data name="MenuFileShare.Text" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="MenuFilePrint.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="MenuFileExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+
+  <!-- ======================== Effects menu ======================== -->
+  <data name="MenuEffects.Content" xml:space="preserve">
+    <value>Effects</value>
+  </data>
+  <data name="MenuEffectGrayscale.Text" xml:space="preserve">
+    <value>Grayscale</value>
+  </data>
+  <data name="MenuEffectSepia.Text" xml:space="preserve">
+    <value>Sepia</value>
+  </data>
+  <data name="MenuEffectInvert.Text" xml:space="preserve">
+    <value>Invert</value>
+  </data>
+  <data name="MenuEffectWarm.Text" xml:space="preserve">
+    <value>Warm</value>
+  </data>
+  <data name="MenuEffectCool.Text" xml:space="preserve">
+    <value>Cool</value>
+  </data>
+  <data name="MenuEffectVibrant.Text" xml:space="preserve">
+    <value>Vibrant</value>
+  </data>
+  <data name="MenuEffectMuted.Text" xml:space="preserve">
+    <value>Muted</value>
+  </data>
+  <data name="MenuEffectBrighten.Text" xml:space="preserve">
+    <value>Brighten</value>
+  </data>
+  <data name="MenuEffectDarken.Text" xml:space="preserve">
+    <value>Darken</value>
+  </data>
+  <data name="MenuEffectSharpen.Text" xml:space="preserve">
+    <value>Sharpen</value>
+  </data>
+  <data name="MenuEffectSoften.Text" xml:space="preserve">
+    <value>Soften</value>
+  </data>
+  <data name="MenuEffectVignette.Text" xml:space="preserve">
+    <value>Vignette</value>
+  </data>
+  <data name="MenuEffectSaveAs.Text" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="MenuEffectReset.Text" xml:space="preserve">
+    <value>Reset to Original</value>
+  </data>
+
+  <!-- ===================== Settings / Help menu ===================== -->
+  <data name="MenuSettings.Content" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MenuSettingsOptions.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="MenuSettingsResetAll.Text" xml:space="preserve">
+    <value>Reset All Settings</value>
+  </data>
+  <data name="MenuHelp.Content" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MenuHelpGuide.Text" xml:space="preserve">
+    <value>Guide</value>
+  </data>
+  <data name="MenuHelpSourceCode.Text" xml:space="preserve">
+    <value>Source Code</value>
+  </data>
+  <data name="MenuHelpAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+
+  <!-- ===================== Window control tips ===================== -->
+  <data name="MinimizeBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="MaximizeBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="CloseBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+
+  <!-- ========================== Viewport ========================== -->
+  <data name="ViewportHint.Text" xml:space="preserve">
+    <value>Use  File › Open  to open an image</value>
+  </data>
+  <data name="FsExitCaption.Text" xml:space="preserve">
+    <value>EXIT FULLSCREEN</value>
+  </data>
+
+  <!-- ======================= Library panel ======================= -->
+  <data name="LibTitle.Text" xml:space="preserve">
+    <value>IMAGE LIBRARY</value>
+  </data>
+  <data name="LibItemsLabel.Text" xml:space="preserve">
+    <value>0 items</value>
+  </data>
+  <data name="LibCloseBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="LibFilters.Text" xml:space="preserve">
+    <value>FILTERS</value>
+  </data>
+  <data name="LibFilterNameLabel.Text" xml:space="preserve">
+    <value>NAME</value>
+  </data>
+  <data name="LibFilterNameBox.PlaceholderText" xml:space="preserve">
+    <value>search by name...</value>
+  </data>
+  <data name="LibFilterFormatLabel.Text" xml:space="preserve">
+    <value>FORMAT</value>
+  </data>
+  <data name="LibFormatAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="LibFormatCount" xml:space="preserve">
+    <value>{} formats</value>
+  </data>
+  <data name="LibFilterSizeLabel.Text" xml:space="preserve">
+    <value>SIZE (KB)</value>
+  </data>
+  <data name="LibFilterSizeMinBox.PlaceholderText" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="LibFilterSizeMaxBox.PlaceholderText" xml:space="preserve">
+    <value>max</value>
+  </data>
+  <data name="LibFilterDateLabel.Text" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="LibFilterDateFromLabel.Text" xml:space="preserve">
+    <value>START</value>
+  </data>
+  <data name="LibFilterDateToLabel.Text" xml:space="preserve">
+    <value>END</value>
+  </data>
+  <data name="LibFilterDimLabel.Text" xml:space="preserve">
+    <value>DIMENSIONS (PX)</value>
+  </data>
+  <data name="LibFilterWidthLabel.Text" xml:space="preserve">
+    <value>WIDTH</value>
+  </data>
+  <data name="LibFilterWidthMinBox.PlaceholderText" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="LibFilterWidthMaxBox.PlaceholderText" xml:space="preserve">
+    <value>max</value>
+  </data>
+  <data name="LibFilterHeightLabel.Text" xml:space="preserve">
+    <value>HEIGHT</value>
+  </data>
+  <data name="LibFilterHeightMinBox.PlaceholderText" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="LibFilterHeightMaxBox.PlaceholderText" xml:space="preserve">
+    <value>max</value>
+  </data>
+  <data name="LibFilterKindLabel.Text" xml:space="preserve">
+    <value>TYPE</value>
+  </data>
+  <data name="LibFilterStillsCheck.Content" xml:space="preserve">
+    <value>Still</value>
+  </data>
+  <data name="LibFilterAnimatedCheck.Content" xml:space="preserve">
+    <value>Animated</value>
+  </data>
+  <data name="LibFilterFolderLabel.Text" xml:space="preserve">
+    <value>FOLDER</value>
+  </data>
+  <data name="LibFolderAll" xml:space="preserve">
+    <value>All folders</value>
+  </data>
+  <data name="LibFilterFavoriteCheck.Content" xml:space="preserve">
+    <value>Favorites only</value>
+  </data>
+  <data name="LibColName.Text" xml:space="preserve">
+    <value>NAME</value>
+  </data>
+  <data name="LibColFormat.Text" xml:space="preserve">
+    <value>FORMAT</value>
+  </data>
+  <data name="LibColDims.Text" xml:space="preserve">
+    <value>DIMENSIONS</value>
+  </data>
+  <data name="LibColSize.Text" xml:space="preserve">
+    <value>SIZE</value>
+  </data>
+  <data name="LibColDate.Text" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="LibItemsCount" xml:space="preserve">
+    <value>{} items</value>
+  </data>
+  <data name="LibResultsCount" xml:space="preserve">
+    <value>{} results</value>
+  </data>
+  <data name="LibResetBtn.Content" xml:space="preserve">
+    <value>Reset Filters</value>
+  </data>
+  <data name="LibResultLabel.Text" xml:space="preserve">
+    <value>0 results</value>
+  </data>
+  <data name="LibDisplayTable.Content" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="LibDisplayThumb.Content" xml:space="preserve">
+    <value>Thumbnail</value>
+  </data>
+  <data name="LibSortDate.Content" xml:space="preserve">
+    <value>By Date</value>
+  </data>
+  <data name="LibSortName.Content" xml:space="preserve">
+    <value>By Name</value>
+  </data>
+  <data name="LibSortFormat.Content" xml:space="preserve">
+    <value>By Format</value>
+  </data>
+  <data name="LibSortSize.Content" xml:space="preserve">
+    <value>By Size</value>
+  </data>
+  <data name="LibResultsPlaceholder.Text" xml:space="preserve">
+    <value>No matching images</value>
+  </data>
+  <data name="LibMenuOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="LibMenuConvert" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="LibMenuUnfavorite" xml:space="preserve">
+    <value>Remove from Favorites</value>
+  </data>
+  <data name="LibMenuRemove" xml:space="preserve">
+    <value>Remove from Library</value>
+  </data>
+  <data name="LibUpdateFailMessage" xml:space="preserve">
+    <value>The library could not be updated.</value>
+  </data>
+  <data name="LibHandleBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Library Panel</value>
+  </data>
+  <data name="LibHandleLabel.Text" xml:space="preserve">
+    <value>L
+I
+B
+R
+A
+R
+Y</value>
+  </data>
+
+  <!-- ========================= Reel panel ========================= -->
+  <data name="ReelTitleLabel.Text" xml:space="preserve">
+    <value>FOLDER</value>
+  </data>
+  <data name="ReelCollapseBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Folder Panel</value>
+  </data>
+  <data name="ReelPagePrevBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Previous page</value>
+  </data>
+  <data name="ReelPageNextBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Next page</value>
+  </data>
+  <data name="ReelPageLabel" xml:space="preserve">
+    <value>{} / {}</value>
+  </data>
+
+  <!-- ===================== Toolbar — left ===================== -->
+  <data name="FolderToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Folder Reel Panel</value>
+  </data>
+  <data name="FolderBtnCaption.Text" xml:space="preserve">
+    <value>FOLDER</value>
+  </data>
+  <data name="FavToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Favorite</value>
+  </data>
+  <data name="FavBtnCaption.Text" xml:space="preserve">
+    <value>FAVORITE</value>
+  </data>
+  <data name="LibAddToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Add to Library</value>
+  </data>
+  <data name="LibAddBtnCaption.Text" xml:space="preserve">
+    <value>LIBRARY</value>
+  </data>
+  <data name="InfoToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>File Info</value>
+  </data>
+  <data name="InfoBtnCaption.Text" xml:space="preserve">
+    <value>INFO</value>
+  </data>
+  <data name="ChipDimensionsLabel.Text" xml:space="preserve">
+    <value>DIMENSIONS</value>
+  </data>
+  <data name="ChipSizeLabel.Text" xml:space="preserve">
+    <value>SIZE</value>
+  </data>
+
+  <!-- ===================== Toolbar — right ===================== -->
+  <data name="RotateBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Rotate</value>
+  </data>
+  <data name="RotateBtnCaption.Text" xml:space="preserve">
+    <value>ROTATE</value>
+  </data>
+  <data name="ZoomOutBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="ZoomLevelLabel.Text" xml:space="preserve">
+    <value>ZOOM LEVEL</value>
+  </data>
+  <data name="ZoomInBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="FsToolBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Fullscreen</value>
+  </data>
+  <data name="FsBtnCaption.Text" xml:space="preserve">
+    <value>FULLSCREEN</value>
+  </data>
+
+  <!-- ========================= Info modal ========================= -->
+  <data name="InfoModalTitle.Text" xml:space="preserve">
+    <value>FILE INFO</value>
+  </data>
+  <data name="InfoLabelName.Text" xml:space="preserve">
+    <value>FILE NAME</value>
+  </data>
+  <data name="InfoLabelFormat.Text" xml:space="preserve">
+    <value>FORMAT</value>
+  </data>
+  <data name="InfoLabelDims.Text" xml:space="preserve">
+    <value>DIMENSIONS</value>
+  </data>
+  <data name="InfoLabelAspect.Text" xml:space="preserve">
+    <value>ASPECT RATIO</value>
+  </data>
+  <data name="InfoLabelDepth.Text" xml:space="preserve">
+    <value>COLOR PALETTE</value>
+  </data>
+  <data name="InfoLabelProfile.Text" xml:space="preserve">
+    <value>COLOR PROFILE</value>
+  </data>
+  <data name="InfoLabelDpi.Text" xml:space="preserve">
+    <value>RESOLUTION</value>
+  </data>
+  <data name="InfoLabelSize.Text" xml:space="preserve">
+    <value>SIZE</value>
+  </data>
+  <data name="InfoLabelCreated.Text" xml:space="preserve">
+    <value>CREATED</value>
+  </data>
+  <data name="InfoLabelModified.Text" xml:space="preserve">
+    <value>MODIFIED</value>
+  </data>
+  <data name="InfoLabelPath.Text" xml:space="preserve">
+    <value>PATH</value>
+  </data>
+
+  <!-- ========================= Guide modal ========================= -->
+  <data name="GuideModalTitle.Text" xml:space="preserve">
+    <value>GUIDE</value>
+  </data>
+  <data name="GuideOpenTitle.Text" xml:space="preserve">
+    <value>OPEN IMAGES</value>
+  </data>
+  <data name="GuideOpenBody.Text" xml:space="preserve">
+    <value>Use File › Open, drop a file onto the viewport, or open one from Explorer. Recent picks wait under File › Recent Files.</value>
+  </data>
+  <data name="GuideReelTitle.Text" xml:space="preserve">
+    <value>BROWSE THE FOLDER</value>
+  </data>
+  <data name="GuideReelBody.Text" xml:space="preserve">
+    <value>The reel on the right lists the open image's folder page by page. Click a thumbnail to switch images; the arrows change pages.</value>
+  </data>
+  <data name="GuideViewTitle.Text" xml:space="preserve">
+    <value>VIEW CONTROLS</value>
+  </data>
+  <data name="GuideViewBody.Text" xml:space="preserve">
+    <value>The mouse wheel zooms at the cursor and dragging pans. Rotate, the zoom slider and fullscreen live on the bottom toolbar.</value>
+  </data>
+  <data name="GuideLibraryTitle.Text" xml:space="preserve">
+    <value>LIBRARY &amp; FAVORITES</value>
+  </data>
+  <data name="GuideLibraryBody.Text" xml:space="preserve">
+    <value>The handle on the left edge opens your library. +LIB keeps the open image, the star marks it a favorite, and the panel filters by name, format, size or date.</value>
+  </data>
+  <data name="GuideConvertTitle.Text" xml:space="preserve">
+    <value>CONVERT &amp; SHARE</value>
+  </data>
+  <data name="GuideConvertBody.Text" xml:space="preserve">
+    <value>File › Convert saves the open image in another format — right-clicking images in Explorer and choosing Convert with Talay works too. File › Share copies it to the clipboard; Print puts it on paper.</value>
+  </data>
+
+  <!-- ========================= About modal ========================= -->
+  <data name="AboutModalTitle.Text" xml:space="preserve">
+    <value>ABOUT TALAY</value>
+  </data>
+  <data name="AboutModalTagline.Text" xml:space="preserve">
+    <value>WATER GOD · IMAGE VIEWER</value>
+  </data>
+  <data name="AboutModalDescription.Text" xml:space="preserve">
+    <value>Image viewer and converter for Windows.</value>
+  </data>
+  <data name="AboutModalCopyright.Text" xml:space="preserve">
+    <value>© 2025 AnkA Interactive</value>
+  </data>
+
+  <!-- ==================== Code-behind strings ==================== -->
+  <data name="CommonOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CommonYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="CommonNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="DialogExitTitle" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="DialogExitMessage" xml:space="preserve">
+    <value>Are you sure you want to exit Talay?</value>
+  </data>
+  <data name="InfoNoImageTitle" xml:space="preserve">
+    <value>File Info</value>
+  </data>
+  <data name="InfoNoImageMessage" xml:space="preserve">
+    <value>Open an image first, then choose Info.</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="LinkOpenFailMessage" xml:space="preserve">
+    <value>The link could not be opened in your browser.</value>
+  </data>
+  <data name="ImageOpenFailed" xml:space="preserve">
+    <value>The image could not be opened.</value>
+  </data>
+  <data name="RecentFileMissingTitle" xml:space="preserve">
+    <value>File Not Found</value>
+  </data>
+  <data name="RecentFileMissingMessage" xml:space="preserve">
+    <value>The file no longer exists and was removed from Recent Files.</value>
+  </data>
+
+  <!-- ====================== Conversion window ====================== -->
+  <data name="ConvTitle.Text" xml:space="preserve">
+    <value>CONVERT IMAGE</value>
+  </data>
+  <data name="ConvCloseBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ConvFormatLabel.Text" xml:space="preserve">
+    <value>FORMAT TO CONVERT</value>
+  </data>
+  <data name="ConvNameLabel.Text" xml:space="preserve">
+    <value>NEW IMAGE NAME</value>
+  </data>
+  <data name="ConvOutputLabel.Text" xml:space="preserve">
+    <value>OUTPUT DIRECTORY</value>
+  </data>
+  <data name="ConvBrowseBtn.Content" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="ConvCancelBtn.Content" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ConvConvertBtn.Content" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+
+  <!-- ================ Conversion code-behind strings ============== -->
+  <data name="ConvertNoImageTitle" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="ConvertNoImageMessage" xml:space="preserve">
+    <value>Open an image first, then choose Convert.</value>
+  </data>
+  <data name="ConvertInvalidTitle" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="ConvertInvalidMessage" xml:space="preserve">
+    <value>Please enter a file name and an output directory.</value>
+  </data>
+  <data name="ConvertDoneTitle" xml:space="preserve">
+    <value>Conversion Complete</value>
+  </data>
+  <data name="ConvertDoneMessage" xml:space="preserve">
+    <value>The image was converted successfully.</value>
+  </data>
+  <data name="ConvertFailedMessage" xml:space="preserve">
+    <value>The image could not be converted.</value>
+  </data>
+
+  <!-- =================== Print code-behind strings ================ -->
+  <data name="PrintNoImageTitle" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="PrintNoImageMessage" xml:space="preserve">
+    <value>Open an image first, then choose Print.</value>
+  </data>
+  <data name="PrintFailTitle" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="PrintFailMessage" xml:space="preserve">
+    <value>The image could not be printed.</value>
+  </data>
+
+  <!-- =================== Share code-behind strings ================ -->
+  <data name="ShareNoImageTitle" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="ShareNoImageMessage" xml:space="preserve">
+    <value>Open an image first, then choose Share.</value>
+  </data>
+  <data name="ShareDoneTitle" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="ShareDoneMessage" xml:space="preserve">
+    <value>The image was copied to the clipboard. You can now paste it into any app.</value>
+  </data>
+  <data name="ShareFailTitle" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="ShareFailMessage" xml:space="preserve">
+    <value>The image could not be copied to the clipboard.</value>
+  </data>
+  <data name="ShareChoiceTitle" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="ShareChoiceMessage" xml:space="preserve">
+    <value>An effect is applied to this image. Which version do you want to share?</value>
+  </data>
+
+  <!-- ============ Effect-version choice captions (Share + Save As) ========== -->
+  <data name="ChoiceWithEffect" xml:space="preserve">
+    <value>With Effect</value>
+  </data>
+  <data name="ChoiceOriginal" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="ChoiceCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+
+  <!-- =================== Save As code-behind strings ================ -->
+  <data name="SaveAsNoImageTitle" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="SaveAsNoImageMessage" xml:space="preserve">
+    <value>Open an image first, then choose Save As.</value>
+  </data>
+  <data name="SaveAsDoneTitle" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="SaveAsDoneMessage" xml:space="preserve">
+    <value>The image was saved.</value>
+  </data>
+  <data name="SaveAsFailTitle" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="SaveAsFailMessage" xml:space="preserve">
+    <value>The image could not be saved.</value>
+  </data>
+
+  <!-- =================== Effects code-behind strings ================ -->
+  <data name="EffectNoImageTitle" xml:space="preserve">
+    <value>Effects</value>
+  </data>
+  <data name="EffectNoImageMessage" xml:space="preserve">
+    <value>Open an image first, then choose an effect.</value>
+  </data>
+
+  <!-- ================ Library import / export strings ============== -->
+  <data name="LibDumpTypeName" xml:space="preserve">
+    <value>SQL dump</value>
+  </data>
+  <data name="LibImportTitle" xml:space="preserve">
+    <value>Import Library</value>
+  </data>
+  <data name="LibImportDoneMessage" xml:space="preserve">
+    <value>Import finished: {} added, {} already in the library, {} skipped (file not found).</value>
+  </data>
+  <data name="LibImportFailMessage" xml:space="preserve">
+    <value>The dump file could not be imported.</value>
+  </data>
+  <data name="LibExportTitle" xml:space="preserve">
+    <value>Export Library</value>
+  </data>
+  <data name="LibExportDoneMessage" xml:space="preserve">
+    <value>The library was exported.</value>
+  </data>
+  <data name="LibExportFailMessage" xml:space="preserve">
+    <value>The library could not be exported.</value>
+  </data>
+
+  <!-- ================ Library pager bar ============== -->
+  <data name="LibPageLabel" xml:space="preserve">
+    <value>{} / {}</value>
+  </data>
+  <data name="LibPageSizeBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Results per page</value>
+  </data>
+  <data name="LibPagePrevBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Previous page</value>
+  </data>
+  <data name="LibPageNextBtn.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Next page</value>
+  </data>
+
+  <!-- ===================== Conversion — source / batch ===================== -->
+  <data name="ConvSourceLabel.Text" xml:space="preserve">
+    <value>SOURCE</value>
+  </data>
+  <data name="ConvSourceCount" xml:space="preserve">
+    <value>{0} files selected</value>
+  </data>
+  <data name="ConvNameBatch" xml:space="preserve">
+    <value>(original names are kept)</value>
+  </data>
+  <data name="ConvertBatchDoneMessage" xml:space="preserve">
+    <value>All {0} images were converted successfully.</value>
+  </data>
+  <data name="ConvertBatchPartialMessage" xml:space="preserve">
+    <value>{0} of {1} images were converted. The rest could not be read or written.</value>
+  </data>
+
+  <!-- ===================== Settings modal ===================== -->
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>SETTINGS</value>
+  </data>
+  <data name="SettingsSectionGeneral" xml:space="preserve">
+    <value>GENERAL</value>
+  </data>
+  <data name="SettingsSectionFileTypes" xml:space="preserve">
+    <value>FILE TYPES</value>
+  </data>
+  <data name="SettingsSectionLibrary" xml:space="preserve">
+    <value>LIBRARY</value>
+  </data>
+  <data name="SettingsLanguageLabel" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="SettingsLangAuto" xml:space="preserve">
+    <value>System default</value>
+  </data>
+  <data name="SettingsLangTurkish" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="SettingsLangEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="SettingsAlwaysOnTop" xml:space="preserve">
+    <value>Keep Talay on top of other windows</value>
+  </data>
+  <data name="SettingsRegisterTypes" xml:space="preserve">
+    <value>Register Talay for supported image formats</value>
+  </data>
+  <data name="SettingsRegisterTypesHint" xml:space="preserve">
+    <value>Talay appears under "Open with" and on the Default Apps page for all supported image files. Windows itself asks you to confirm a default app.</value>
+  </data>
+  <data name="SettingsAutoAdd" xml:space="preserve">
+    <value>Add opened images to the library automatically</value>
+  </data>
+  <data name="SettingsResetLibraryBtn" xml:space="preserve">
+    <value>Reset library…</value>
+  </data>
+  <data name="SettingsSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SettingsCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SettingsDefaults" xml:space="preserve">
+    <value>Defaults</value>
+  </data>
+  <data name="SettingsRestartTitle" xml:space="preserve">
+    <value>Restart Talay</value>
+  </data>
+  <data name="SettingsRestartMessage" xml:space="preserve">
+    <value>The language change takes effect after a restart. Restart now?</value>
+  </data>
+  <data name="SettingsResetLibTitle" xml:space="preserve">
+    <value>Reset Library</value>
+  </data>
+  <data name="SettingsResetLibWarnMessage" xml:space="preserve">
+    <value>This permanently removes all {0} entries from your library, favorites included. The image files on your disk are NOT deleted. Continue?</value>
+  </data>
+  <data name="SettingsResetLibDoneMessage" xml:space="preserve">
+    <value>The library was reset.</value>
+  </data>
+  <data name="SettingsResetLibFailMessage" xml:space="preserve">
+    <value>The library could not be reset.</value>
+  </data>
+  <data name="SettingsResetAllTitle" xml:space="preserve">
+    <value>Reset All Settings</value>
+  </data>
+  <data name="SettingsResetAllMessage" xml:space="preserve">
+    <value>This restores every setting to its defaults — language, window size and position, the always-on-top and file-type options, and the conversion format and folder. Your library and image files are NOT affected. Continue?</value>
+  </data>
+  <data name="SettingsResetAllDoneMessage" xml:space="preserve">
+    <value>All settings were reset to their defaults.</value>
+  </data>
+
+  <!-- ===================== Shell integration ===================== -->
+  <data name="ShellAppDescription" xml:space="preserve">
+    <value>Talay Image Viewer and Converter</value>
+  </data>
+  <data name="ShellConvertVerb" xml:space="preserve">
+    <value>Convert with Talay</value>
+  </data>
+</root>

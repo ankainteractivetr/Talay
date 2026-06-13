@@ -1,0 +1,8 @@
+namespace Talay
+{
+    [default_interface]
+    runtimeclass ConversionWindow : Microsoft.UI.Xaml.Window
+    {
+        ConversionWindow();
+    }
+}

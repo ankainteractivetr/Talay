@@ -1,0 +1,8 @@
+namespace Talay
+{
+    [default_interface]
+    runtimeclass OCursorHost : Microsoft.UI.Xaml.Controls.Grid
+    {
+        OCursorHost();
+    }
+}

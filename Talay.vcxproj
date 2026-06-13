@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.props" Condition="Exists('packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.props')" />
+  <Import Project="packages\Microsoft.Windows.CppWinRT.3.0.260520.1\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('packages\Microsoft.Windows.CppWinRT.3.0.260520.1\build\native\Microsoft.Windows.CppWinRT.props')" />
+  <Import Project="packages\Microsoft.WindowsAppSDK.2.1.3\build\native\Microsoft.WindowsAppSDK.props" Condition="Exists('packages\Microsoft.WindowsAppSDK.2.1.3\build\native\Microsoft.WindowsAppSDK.props')" />
+  <Import Project="packages\Microsoft.WindowsAppSDK.WinUI.2.1.0\build\native\Microsoft.WindowsAppSDK.WinUI.props" Condition="Exists('packages\Microsoft.WindowsAppSDK.WinUI.2.1.0\build\native\Microsoft.WindowsAppSDK.WinUI.props')" />
+  <Import Project="packages\Microsoft.WindowsAppSDK.Runtime.2.1.3\build\native\Microsoft.WindowsAppSDK.Runtime.props" Condition="Exists('packages\Microsoft.WindowsAppSDK.Runtime.2.1.3\build\native\Microsoft.WindowsAppSDK.Runtime.props')" />
+  <Import Project="packages\Microsoft.WindowsAppSDK.Foundation.2.0.21\build\native\Microsoft.WindowsAppSDK.Foundation.props" Condition="Exists('packages\Microsoft.WindowsAppSDK.Foundation.2.0.21\build\native\Microsoft.WindowsAppSDK.Foundation.props')" />
+  <Import Project="packages\Microsoft.WindowsAppSDK.InteractiveExperiences.2.0.13\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props" Condition="Exists('packages\Microsoft.WindowsAppSDK.InteractiveExperiences.2.0.13\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props')" />
+  <Import Project="packages\Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.props" Condition="Exists('packages\Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.props')" />
+  <Import Project="packages\Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.props" Condition="Exists('packages\Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.props')" />
+  <Import Project="packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.251221100\build\Microsoft.Windows.SDK.BuildTools.MSIX.props" Condition="Exists('packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.251221100\build\Microsoft.Windows.SDK.BuildTools.MSIX.props')" />
+  <PropertyGroup Label="Globals">
+    <CppWinRTOptimized>true</CppWinRTOptimized>
+    <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
+    <MinimalCoreWin>true</MinimalCoreWin>
+    <ProjectGuid>{1e0fa8b2-bc99-4fdb-9d72-f42669fa50d9}</ProjectGuid>
+    <ProjectName>Talay</ProjectName>
+    <RootNamespace>Talay</RootNamespace>
+    <!--
+      $(TargetName) should be same as $(RootNamespace) so that the produced binaries (.exe/.pri/etc.)
+      have a name that matches the .winmd
+    -->
+    <TargetName>$(RootNamespace)</TargetName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>false</AppContainerApplication>
+    <AppxPackage>false</AppxPackage>
+    <ApplicationType>Windows Store</ApplicationType>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <WindowsPackageType>None</WindowsPackageType>
+    <!--
+      Self-contained: bundle the Windows App SDK runtime DLLs next to Talay.exe
+      so the app runs on a clean machine with no separate runtime install.
+      Required for a stand-alone classic installer (setup.exe).
+    -->
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <!--
+      Talay uses only WinUI + the core runtime. The Widgets, AI and ML modules
+      are intentionally not referenced (see packages.config), so this opts out
+      of the meta-package's strict transitive-dependency verifier — the
+      supported switch for a slimmed, framework-modular build.
+    -->
+    <WindowsAppSDKVerifyTransitiveDependencies>false</WindowsAppSDKVerifyTransitiveDependencies>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <DesktopCompatible>true</DesktopCompatible>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level4</WarningLevel>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <!-- FreeImage: header search path. (Direct2D headers — d2d1.h, dwrite.h,
+           wincodec.h — ship with the Windows SDK and are already on the include
+           path via the platform toolset, so no extra directory is needed.) -->
+      <AdditionalIncludeDirectories>$(ProjectDir)libs\FreeImage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <!-- FreeImage: import library directory for the linker. -->
+      <AdditionalLibraryDirectories>$(ProjectDir)libs\FreeImage;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <!-- Link libraries: FreeImage (libs\FreeImage) plus the Direct2D stack from
+           the Windows SDK. Centralised here instead of via #pragma comment(lib). -->
+      <AdditionalDependencies>FreeImage.lib;d2d1.lib;dwrite.lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <!-- Keep symbols for crash diagnosis but out of the deploy folder: the
+           linker writes Talay.pdb to x64\Release\Symbols\ instead of OutDir,
+           so the shippable OutDir never carries the ~73 MB .pdb. -->
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)..\Symbols\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(WindowsPackageType)'!='None' and Exists('Package.appxmanifest')">
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework\Core\Error\ExceptionHandler\IExceptionHandler.hpp" />
+    <ClInclude Include="framework\Core\Error\ExceptionHandler\OExceptionHandler.hpp" />
+    <ClInclude Include="framework\Core\Error\Exception\IException.hpp" />
+    <ClInclude Include="framework\Core\Error\Exception\OException.hpp" />
+    <ClInclude Include="framework\Core\IO\FilePicker\IFilePicker.hpp" />
+    <ClInclude Include="framework\Core\IO\FilePicker\OFilePicker.hpp" />
+    <ClInclude Include="framework\GUI\Dialog\DialogRequest.hpp" />
+    <ClInclude Include="framework\GUI\Dialog\IDialogService.hpp" />
+    <ClInclude Include="framework\GUI\Dialog\ODialogService.hpp" />
+    <ClInclude Include="framework\GUI\DragDrop\IFileDropTarget.hpp" />
+    <ClInclude Include="framework\GUI\DragDrop\OFileDropTarget.hpp" />
+    <ClInclude Include="framework\GUI\Menu\IMenuFactory.hpp" />
+    <ClInclude Include="framework\GUI\Menu\MenuCommand.hpp" />
+    <ClInclude Include="framework\GUI\Menu\OMenuFactory.hpp" />
+    <ClInclude Include="framework\GUI\Presentation\IImagePresenter.hpp" />
+    <ClInclude Include="framework\GUI\Presentation\OImagePresenter.hpp" />
+    <ClInclude Include="IFolderReel.hpp" />
+    <ClInclude Include="ReelControls.hpp" />
+    <ClInclude Include="OFolderReel.hpp" />
+    <ClInclude Include="framework\GUI\Viewport\Extent.hpp" />
+    <ClInclude Include="framework\GUI\Viewport\IFramingPolicy.hpp" />
+    <ClInclude Include="framework\GUI\Viewport\IImageViewport.hpp" />
+    <ClInclude Include="framework\GUI\Viewport\OFitOrNativeFraming.hpp" />
+    <ClInclude Include="framework\GUI\Viewport\OImageViewport.hpp" />
+    <ClInclude Include="framework\GUI\Viewport\PanBounds.hpp" />
+    <ClInclude Include="framework\GUI\Cursor\CursorShape.hpp" />
+    <ClInclude Include="framework\GUI\Cursor\ICursorRule.hpp" />
+    <ClInclude Include="framework\GUI\Cursor\OClickableCursorRule.hpp" />
+    <ClInclude Include="framework\GUI\Cursor\OViewportDragCursorRule.hpp" />
+    <ClInclude Include="framework\GUI\Cursor\IHoverCursorController.hpp" />
+    <ClInclude Include="framework\GUI\Cursor\OHoverCursorController.hpp" />
+    <ClInclude Include="framework\Core\IO\File\IFile.hpp" />
+    <ClInclude Include="framework\Core\IO\File\IIniFile.hpp" />
+    <ClInclude Include="framework\Core\IO\File\ITextFile.hpp" />
+    <ClInclude Include="framework\Core\IO\File\OFile.hpp" />
+    <ClInclude Include="framework\Core\IO\File\OIniFile.hpp" />
+    <ClInclude Include="framework\Core\IO\File\OTextFile.hpp" />
+    <ClInclude Include="framework\Core\IO\Folder\IFolderImageScanner.hpp" />
+    <ClInclude Include="framework\Core\IO\Folder\OFolderImageScanner.hpp" />
+    <ClInclude Include="framework\Core\IO\Folder\KnownFolders.hpp" />
+    <ClInclude Include="framework\Core\Object\IObject.hpp" />
+    <ClInclude Include="framework\Core\Object\ObjectIdentity.hpp" />
+    <ClInclude Include="framework\Core\Object\OObject.hpp" />
+    <ClInclude Include="framework\Graphics\Surface.hpp" />
+    <ClInclude Include="framework\Graphics\Resource\IGraphicsResourceKeeper.hpp" />
+    <ClInclude Include="framework\Graphics\Resource\OGraphicsResourceKeeper.hpp" />
+    <ClInclude Include="framework\Graphics\Bitmap\IBitmapFactory.hpp" />
+    <ClInclude Include="framework\Graphics\Bitmap\OBitmapFactory.hpp" />
+    <ClInclude Include="framework\Graphics\Bitmap\ISurfaceBitmap.hpp" />
+    <ClInclude Include="framework\Graphics\Bitmap\OStillBitmap.hpp" />
+    <ClInclude Include="framework\Graphics\Bitmap\OContinuousBitmap.hpp" />
+    <ClInclude Include="framework\Graphics\Bitmap\ISurfaceBitmapFactory.hpp" />
+    <ClInclude Include="framework\Graphics\Bitmap\OSurfaceBitmapFactory.hpp" />
+    <ClInclude Include="framework\Graphics\Renderer\IRenderer.hpp" />
+    <ClInclude Include="framework\Graphics\Renderer\ORenderer.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\PixelView.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\PixelCodec.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\IPixelEffect.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\ColorMatrix.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\ColorMatrixPresets.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\OColorMatrixEffect.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\LookupTable.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\LutPresets.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\OLutEffect.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\ConvolutionKernel.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\KernelPresets.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\OConvolutionEffect.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\OVignetteEffect.hpp" />
+    <ClInclude Include="framework\Graphics\Effect\EffectApplication.hpp" />
+    <ClInclude Include="framework\Graphics\Image\DecodedImage.hpp" />
+    <ClInclude Include="framework\Graphics\Image\ImageFrame.hpp" />
+    <ClInclude Include="framework\Graphics\Image\ImageSequence.hpp" />
+    <ClInclude Include="framework\Graphics\Image\IImageDecoder.hpp" />
+    <ClInclude Include="framework\Graphics\Image\OWicImageDecoder.hpp" />
+    <ClInclude Include="framework\Graphics\Image\OFreeImageDecoder.hpp" />
+    <ClInclude Include="framework\Graphics\Image\IImageEncoder.hpp" />
+    <ClInclude Include="framework\Graphics\Image\OFreeImageEncoder.hpp" />
+    <ClInclude Include="framework\Graphics\Image\IImageThumbnailer.hpp" />
+    <ClInclude Include="framework\Graphics\Image\OWicImageThumbnailer.hpp" />
+    <ClInclude Include="framework\Graphics\Conversion\ConversionRequest.hpp" />
+    <ClInclude Include="framework\Graphics\Conversion\IImageConverter.hpp" />
+    <ClInclude Include="framework\Graphics\Conversion\OImageConverter.hpp" />
+    <ClInclude Include="framework\Graphics\Image\IImageFileReader.hpp" />
+    <ClInclude Include="framework\Graphics\Image\OImageFileReader.hpp" />
+    <ClInclude Include="framework\Graphics\Image\ImageMetadata.hpp" />
+    <ClInclude Include="framework\Graphics\Image\ImageInfoText.hpp" />
+    <ClInclude Include="framework\Graphics\Image\IImageMetadataReader.hpp" />
+    <ClInclude Include="framework\Graphics\Image\OImageMetadataReader.hpp" />
+    <ClInclude Include="framework\Graphics\Print\PrintRequest.hpp" />
+    <ClInclude Include="framework\Graphics\Print\PageFitting.hpp" />
+    <ClInclude Include="framework\Graphics\Print\IImagePrinter.hpp" />
+    <ClInclude Include="framework\Graphics\Print\OImagePrinter.hpp" />
+    <ClInclude Include="framework\System\Windows\windows.hpp" />
+    <ClInclude Include="framework\System\Time\UnixTime.hpp" />
+    <ClInclude Include="framework\System\Process\ExecutablePath.hpp" />
+    <ClInclude Include="LocalizedDialog.hpp" />
+    <ClInclude Include="framework\Core\Settings\IProgramSettings.hpp" />
+    <ClInclude Include="framework\Core\Settings\OProgramSettings.hpp" />
+    <ClInclude Include="Language.hpp" />
+    <ClInclude Include="ILanguageDetector.hpp" />
+    <ClInclude Include="OSystemLanguageDetector.hpp" />
+    <ClInclude Include="framework\Core\Localization\ILocalizationService.hpp" />
+    <ClInclude Include="framework\Core\Localization\OLocalizationService.hpp" />
+    <ClInclude Include="ITalaySettings.hpp" />
+    <ClInclude Include="OTalaySettings.hpp" />
+    <ClInclude Include="ImageFormats.hpp" />
+    <ClInclude Include="LaunchRequest.hpp" />
+    <ClInclude Include="TalayLinks.hpp" />
+    <ClInclude Include="TalayShell.hpp" />
+    <ClInclude Include="IShellIntegration.hpp" />
+    <ClInclude Include="OShellIntegration.hpp" />
+    <ClInclude Include="SettingsState.hpp" />
+    <ClInclude Include="ISettingsPresenter.hpp" />
+    <ClInclude Include="OSettingsPresenter.hpp" />
+    <ClInclude Include="OSettingsDialog.hpp" />
+    <ClInclude Include="IPrintPresenter.hpp" />
+    <ClInclude Include="OPrintPresenter.hpp" />
+    <ClInclude Include="ISharePresenter.hpp" />
+    <ClInclude Include="OSharePresenter.hpp" />
+    <ClInclude Include="EffectKind.hpp" />
+    <ClInclude Include="IEffectCatalog.hpp" />
+    <ClInclude Include="OEffectCatalog.hpp" />
+    <ClInclude Include="ISaveAsPresenter.hpp" />
+    <ClInclude Include="OSaveAsPresenter.hpp" />
+    <ClInclude Include="framework\System\Clipboard\IImageClipboard.hpp" />
+    <ClInclude Include="framework\System\Clipboard\OImageClipboard.hpp" />
+    <ClInclude Include="framework\System\Shell\ILinkOpener.hpp" />
+    <ClInclude Include="framework\System\Shell\OLinkOpener.hpp" />
+    <ClInclude Include="framework\System\Shell\IShellRegistrar.hpp" />
+    <ClInclude Include="framework\System\Shell\OShellRegistrar.hpp" />
+    <ClInclude Include="framework\System\Instance\IInstanceChannel.hpp" />
+    <ClInclude Include="framework\System\Instance\OInstanceChannel.hpp" />
+    <ClInclude Include="framework\GUI\Presentation\BitmapConversion.hpp" />
+    <ClInclude Include="Range.hpp" />
+    <ClInclude Include="LibraryEntry.hpp" />
+    <ClInclude Include="LibraryFilter.hpp" />
+    <ClInclude Include="IImageLibrary.hpp" />
+    <ClInclude Include="OImageLibrary.hpp" />
+    <ClInclude Include="ILibraryReconciler.hpp" />
+    <ClInclude Include="OLibraryReconciler.hpp" />
+    <ClInclude Include="OCursorHost.h" />
+    <ClInclude Include="IEntrySpecification.hpp" />
+    <ClInclude Include="OEntrySpecifications.hpp" />
+    <ClInclude Include="OSpecificationFactory.hpp" />
+    <ClInclude Include="ILibraryStore.hpp" />
+    <ClInclude Include="OSqliteLibraryStore.hpp" />
+    <ClInclude Include="LibrarySchema.hpp" />
+    <ClInclude Include="ILibraryTransfer.hpp" />
+    <ClInclude Include="OLibraryTransfer.hpp" />
+    <ClInclude Include="framework\Core\Database\IStatement.hpp" />
+    <ClInclude Include="framework\Core\Database\IDatabase.hpp" />
+    <ClInclude Include="framework\Core\Database\OSqliteDatabase.hpp" />
+    <ClInclude Include="framework\Core\Paging\Pager.hpp" />
+    <ClInclude Include="framework\Core\RecentFiles\RecentFile.hpp" />
+    <ClInclude Include="framework\Core\RecentFiles\RecentFilesSchema.hpp" />
+    <ClInclude Include="framework\Core\RecentFiles\IRecentFilesStore.hpp" />
+    <ClInclude Include="framework\Core\RecentFiles\OSqliteRecentFilesStore.hpp" />
+    <ClInclude Include="framework\Core\RecentFiles\IRecentFilesTracker.hpp" />
+    <ClInclude Include="framework\Core\RecentFiles\ORecentFilesTracker.hpp" />
+    <ClInclude Include="framework\GUI\Menu\IRecentFilesMenu.hpp" />
+    <ClInclude Include="framework\GUI\Menu\ORecentFilesMenu.hpp" />
+    <ClInclude Include="LibraryPanelControls.hpp" />
+    <ClInclude Include="ILibraryPanel.hpp" />
+    <ClInclude Include="OLibraryPanel.hpp" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="MainWindow.xaml.h">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="ConversionWindow.xaml.h">
+      <DependentUpon>ConversionWindow.xaml</DependentUpon>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+    <Page Include="MainWindow.xaml" />
+    <Page Include="ConversionWindow.xaml" />
+    <Page Include="Styles\Theme.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="framework\Core\Error\ExceptionHandler\OExceptionHandler.cpp" />
+    <ClCompile Include="framework\Core\Error\Exception\OException.cpp" />
+    <ClCompile Include="framework\Core\IO\FilePicker\OFilePicker.cpp" />
+    <ClCompile Include="framework\GUI\Dialog\ODialogService.cpp" />
+    <ClCompile Include="framework\GUI\DragDrop\OFileDropTarget.cpp" />
+    <ClCompile Include="framework\GUI\Menu\OMenuFactory.cpp" />
+    <ClCompile Include="framework\GUI\Presentation\OImagePresenter.cpp" />
+    <ClCompile Include="OFolderReel.cpp" />
+    <ClCompile Include="framework\GUI\Viewport\OFitOrNativeFraming.cpp" />
+    <ClCompile Include="framework\GUI\Viewport\OImageViewport.cpp" />
+    <ClCompile Include="framework\GUI\Cursor\OClickableCursorRule.cpp" />
+    <ClCompile Include="framework\GUI\Cursor\OViewportDragCursorRule.cpp" />
+    <ClCompile Include="framework\GUI\Cursor\OHoverCursorController.cpp" />
+    <ClCompile Include="framework\Core\IO\File\IFile.cpp" />
+    <ClCompile Include="framework\Core\IO\File\OFile.cpp" />
+    <ClCompile Include="framework\Core\IO\File\OIniFile.cpp" />
+    <ClCompile Include="framework\Core\IO\File\OTextFile.cpp" />
+    <ClCompile Include="framework\Core\IO\Folder\OFolderImageScanner.cpp" />
+    <ClCompile Include="framework\Core\IO\Folder\KnownFolders.cpp" />
+    <ClCompile Include="framework\System\Time\UnixTime.cpp" />
+    <ClCompile Include="framework\System\Process\ExecutablePath.cpp" />
+    <ClCompile Include="LocalizedDialog.cpp" />
+    <ClCompile Include="framework\Core\Settings\OProgramSettings.cpp" />
+    <ClCompile Include="OSystemLanguageDetector.cpp" />
+    <ClCompile Include="framework\Core\Localization\OLocalizationService.cpp" />
+    <ClCompile Include="framework\Graphics\Resource\OGraphicsResourceKeeper.cpp" />
+    <ClCompile Include="framework\Graphics\Bitmap\OBitmapFactory.cpp" />
+    <ClCompile Include="framework\Graphics\Bitmap\OStillBitmap.cpp" />
+    <ClCompile Include="framework\Graphics\Bitmap\OContinuousBitmap.cpp" />
+    <ClCompile Include="framework\Graphics\Bitmap\OSurfaceBitmapFactory.cpp" />
+    <ClCompile Include="framework\Graphics\Renderer\ORenderer.cpp" />
+    <ClCompile Include="framework\Graphics\Effect\ColorMatrixPresets.cpp" />
+    <ClCompile Include="framework\Graphics\Effect\OColorMatrixEffect.cpp" />
+    <ClCompile Include="framework\Graphics\Effect\LutPresets.cpp" />
+    <ClCompile Include="framework\Graphics\Effect\OLutEffect.cpp" />
+    <ClCompile Include="framework\Graphics\Effect\KernelPresets.cpp" />
+    <ClCompile Include="framework\Graphics\Effect\OConvolutionEffect.cpp" />
+    <ClCompile Include="framework\Graphics\Effect\OVignetteEffect.cpp" />
+    <ClCompile Include="framework\Graphics\Effect\EffectApplication.cpp" />
+    <ClCompile Include="framework\Graphics\Image\OWicImageDecoder.cpp" />
+    <ClCompile Include="framework\Graphics\Image\OFreeImageDecoder.cpp" />
+    <ClCompile Include="framework\Graphics\Image\OFreeImageEncoder.cpp" />
+    <ClCompile Include="framework\Graphics\Image\OWicImageThumbnailer.cpp" />
+    <ClCompile Include="framework\Graphics\Conversion\OImageConverter.cpp" />
+    <ClCompile Include="framework\Graphics\Image\OImageFileReader.cpp" />
+    <ClCompile Include="framework\Graphics\Image\OImageMetadataReader.cpp" />
+    <ClCompile Include="framework\Graphics\Image\ImageInfoText.cpp" />
+    <ClCompile Include="framework\Graphics\Print\OImagePrinter.cpp" />
+    <ClCompile Include="OTalaySettings.cpp" />
+    <ClCompile Include="LaunchRequest.cpp" />
+    <ClCompile Include="TalayShell.cpp" />
+    <ClCompile Include="OShellIntegration.cpp" />
+    <ClCompile Include="OSettingsPresenter.cpp" />
+    <ClCompile Include="OSettingsDialog.cpp" />
+    <ClCompile Include="OPrintPresenter.cpp" />
+    <ClCompile Include="OSharePresenter.cpp" />
+    <ClCompile Include="OEffectCatalog.cpp" />
+    <ClCompile Include="OSaveAsPresenter.cpp" />
+    <ClCompile Include="framework\System\Clipboard\OImageClipboard.cpp" />
+    <ClCompile Include="framework\System\Shell\OLinkOpener.cpp" />
+    <ClCompile Include="framework\System\Shell\OShellRegistrar.cpp" />
+    <ClCompile Include="framework\System\Instance\OInstanceChannel.cpp" />
+    <ClCompile Include="framework\Core\Object\OObject.cpp" />
+    <ClCompile Include="framework\GUI\Presentation\BitmapConversion.cpp" />
+    <ClCompile Include="OImageLibrary.cpp" />
+    <ClCompile Include="OLibraryReconciler.cpp" />
+    <ClCompile Include="OEntrySpecifications.cpp" />
+    <ClCompile Include="OSpecificationFactory.cpp" />
+    <ClCompile Include="OSqliteLibraryStore.cpp" />
+    <ClCompile Include="OLibraryTransfer.cpp" />
+    <ClCompile Include="framework\Core\Database\OSqliteDatabase.cpp" />
+    <ClCompile Include="framework\Core\RecentFiles\OSqliteRecentFilesStore.cpp" />
+    <ClCompile Include="framework\Core\RecentFiles\ORecentFilesTracker.cpp" />
+    <ClCompile Include="framework\GUI\Menu\ORecentFilesMenu.cpp" />
+    <ClCompile Include="OLibraryPanel.cpp" />
+    <ClCompile Include="OCursorHost.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="App.xaml.cpp">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="MainWindow.xaml.cpp">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="ConversionWindow.xaml.cpp">
+      <DependentUpon>ConversionWindow.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="OCursorHost.idl">
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="MainWindow.idl">
+      <SubType>Code</SubType>
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Midl>
+    <Midl Include="ConversionWindow.idl">
+      <SubType>Code</SubType>
+      <DependentUpon>ConversionWindow.xaml</DependentUpon>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Talay.rc" />
+  </ItemGroup>
+  <!-- Localized UI strings. MakePri indexes these into resources.pri during the
+       build; the resource system selects en-US (default) or tr-TR by the system
+       display language. -->
+  <ItemGroup>
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\tr-TR\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-100.png" />
+    <Image Include="Assets\LockScreenLogo.scale-125.png" />
+    <Image Include="Assets\LockScreenLogo.scale-150.png" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png" />
+    <Image Include="Assets\LockScreenLogo.scale-400.png" />
+    <Image Include="Assets\SplashScreen.scale-100.png" />
+    <Image Include="Assets\SplashScreen.scale-125.png" />
+    <Image Include="Assets\SplashScreen.scale-150.png" />
+    <Image Include="Assets\SplashScreen.scale-200.png" />
+    <Image Include="Assets\SplashScreen.scale-400.png" />
+    <Image Include="Assets\Square150x150Logo.scale-100.png" />
+    <Image Include="Assets\Square150x150Logo.scale-125.png" />
+    <Image Include="Assets\Square150x150Logo.scale-150.png" />
+    <Image Include="Assets\Square150x150Logo.scale-200.png" />
+    <Image Include="Assets\Square150x150Logo.scale-400.png" />
+    <Image Include="Assets\Square44x44Logo.scale-100.png" />
+    <Image Include="Assets\Square44x44Logo.scale-125.png" />
+    <Image Include="Assets\Square44x44Logo.scale-150.png" />
+    <Image Include="Assets\Square44x44Logo.scale-200.png" />
+    <Image Include="Assets\Square44x44Logo.scale-400.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-16_altform-lightunplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-16_altform-unplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-lightunplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-256_altform-lightunplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-256_altform-unplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-32_altform-lightunplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-32_altform-unplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-48_altform-lightunplated.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <Image Include="Assets\StoreLogo.scale-100.png" />
+    <Image Include="Assets\StoreLogo.scale-125.png" />
+    <Image Include="Assets\StoreLogo.scale-150.png" />
+    <Image Include="Assets\StoreLogo.scale-200.png" />
+    <Image Include="Assets\StoreLogo.scale-400.png" />
+    <Image Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Image Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Image Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Image Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Image Include="Assets\Wide310x150Logo.scale-400.png" />
+  </ItemGroup>
+  <!--
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <!--
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+  <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Microsoft.Web.WebView2.1.0.3719.77\build\native\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.3719.77\build\native\Microsoft.Web.WebView2.targets')" />
+    <Import Project="packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.251221100\build\Microsoft.Windows.SDK.BuildTools.MSIX.targets" Condition="Exists('packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.251221100\build\Microsoft.Windows.SDK.BuildTools.MSIX.targets')" />
+    <Import Project="packages\Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.targets" Condition="Exists('packages\Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.targets')" />
+    <Import Project="packages\Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.targets" Condition="Exists('packages\Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.targets')" />
+    <Import Project="packages\Microsoft.WindowsAppSDK.InteractiveExperiences.2.0.13\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets" Condition="Exists('packages\Microsoft.WindowsAppSDK.InteractiveExperiences.2.0.13\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets')" />
+    <Import Project="packages\Microsoft.WindowsAppSDK.Foundation.2.0.21\build\native\Microsoft.WindowsAppSDK.Foundation.targets" Condition="Exists('packages\Microsoft.WindowsAppSDK.Foundation.2.0.21\build\native\Microsoft.WindowsAppSDK.Foundation.targets')" />
+    <Import Project="packages\Microsoft.WindowsAppSDK.Runtime.2.1.3\build\native\Microsoft.WindowsAppSDK.Runtime.targets" Condition="Exists('packages\Microsoft.WindowsAppSDK.Runtime.2.1.3\build\native\Microsoft.WindowsAppSDK.Runtime.targets')" />
+    <Import Project="packages\Microsoft.WindowsAppSDK.WinUI.2.1.0\build\native\Microsoft.WindowsAppSDK.WinUI.targets" Condition="Exists('packages\Microsoft.WindowsAppSDK.WinUI.2.1.0\build\native\Microsoft.WindowsAppSDK.WinUI.targets')" />
+    <Import Project="packages\Microsoft.WindowsAppSDK.2.1.3\build\native\Microsoft.WindowsAppSDK.targets" Condition="Exists('packages\Microsoft.WindowsAppSDK.2.1.3\build\native\Microsoft.WindowsAppSDK.targets')" />
+    <Import Project="packages\Microsoft.Windows.CppWinRT.3.0.260520.1\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('packages\Microsoft.Windows.CppWinRT.3.0.260520.1\build\native\Microsoft.Windows.CppWinRT.targets')" />
+    <Import Project="packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.targets" Condition="Exists('packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.targets')" />
+    <Import Project="packages\Microsoft.Windows.ImplementationLibrary.1.0.260126.7\build\native\Microsoft.Windows.ImplementationLibrary.targets" Condition="Exists('packages\Microsoft.Windows.ImplementationLibrary.1.0.260126.7\build\native\Microsoft.Windows.ImplementationLibrary.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Web.WebView2.1.0.3719.77\build\native\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Web.WebView2.1.0.3719.77\build\native\Microsoft.Web.WebView2.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.251221100\build\Microsoft.Windows.SDK.BuildTools.MSIX.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.251221100\build\Microsoft.Windows.SDK.BuildTools.MSIX.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.251221100\build\Microsoft.Windows.SDK.BuildTools.MSIX.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.251221100\build\Microsoft.Windows.SDK.BuildTools.MSIX.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.Base.2.0.4\build\native\Microsoft.WindowsAppSDK.Base.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.DWrite.2.1.0\build\Microsoft.WindowsAppSDK.DWrite.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.InteractiveExperiences.2.0.13\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.InteractiveExperiences.2.0.13\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.InteractiveExperiences.2.0.13\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.InteractiveExperiences.2.0.13\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.Foundation.2.0.21\build\native\Microsoft.WindowsAppSDK.Foundation.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.Foundation.2.0.21\build\native\Microsoft.WindowsAppSDK.Foundation.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.Foundation.2.0.21\build\native\Microsoft.WindowsAppSDK.Foundation.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.Foundation.2.0.21\build\native\Microsoft.WindowsAppSDK.Foundation.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.Runtime.2.1.3\build\native\Microsoft.WindowsAppSDK.Runtime.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.Runtime.2.1.3\build\native\Microsoft.WindowsAppSDK.Runtime.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.Runtime.2.1.3\build\native\Microsoft.WindowsAppSDK.Runtime.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.Runtime.2.1.3\build\native\Microsoft.WindowsAppSDK.Runtime.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.WinUI.2.1.0\build\native\Microsoft.WindowsAppSDK.WinUI.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.WinUI.2.1.0\build\native\Microsoft.WindowsAppSDK.WinUI.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.WinUI.2.1.0\build\native\Microsoft.WindowsAppSDK.WinUI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.WinUI.2.1.0\build\native\Microsoft.WindowsAppSDK.WinUI.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.2.1.3\build\native\Microsoft.WindowsAppSDK.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.2.1.3\build\native\Microsoft.WindowsAppSDK.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.WindowsAppSDK.2.1.3\build\native\Microsoft.WindowsAppSDK.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.WindowsAppSDK.2.1.3\build\native\Microsoft.WindowsAppSDK.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Windows.CppWinRT.3.0.260520.1\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.CppWinRT.3.0.260520.1\build\native\Microsoft.Windows.CppWinRT.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.Windows.CppWinRT.3.0.260520.1\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.CppWinRT.3.0.260520.1\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Windows.ImplementationLibrary.1.0.260126.7\build\native\Microsoft.Windows.ImplementationLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.ImplementationLibrary.1.0.260126.7\build\native\Microsoft.Windows.ImplementationLibrary.targets'))" />
+  </Target>
+  <!-- =========================================================================
+       FreeImage: copy the runtime DLL next to the built executable so the app
+       can load it at runtime. SkipUnchangedFiles keeps incremental builds fast.
+       ========================================================================= -->
+  <Target Name="CopyFreeImageDll" AfterTargets="Build">
+    <Copy SourceFiles="$(ProjectDir)libs\FreeImage\FreeImage.dll"
+          DestinationFolder="$(OutDir)"
+          SkipUnchangedFiles="true" />
+  </Target>
+  <!-- =========================================================================
+       Release: make the build emit a runtime-only OutDir directly, with no
+       separate staging step.
+
+       The Windows App SDK self-contained copy
+       (AddMicrosoftWindowsAppSDKPayloadFilesFromComponents in
+       Microsoft.WindowsAppSDK.SelfContained.targets) drops framework metadata
+       (*.winmd), a design-time helper (Microsoft.UI.Designer.dll) and WinUI
+       control-string resources for ~85 display languages into OutDir as
+       PreserveNewest payload. None are loaded at runtime by this native
+       C++/WinRT app, and the SDK exposes no working opt-out, so they are
+       removed here after they land. The PDB is kept (redirected to ..\Symbols
+       by the Release ItemDefinitionGroup above) for crash symbolication.
+
+       This runs on every Release build; once the SDK copy is satisfied,
+       incremental builds skip it and the deletions below become no-ops.
+       ========================================================================= -->
+  <Target Name="EnsureSymbolsDir" BeforeTargets="Link" Condition="'$(Configuration)'=='Release'">
+    <MakeDir Directories="$(OutDir)..\Symbols" />
+  </Target>
+  <Target Name="TrimReleaseOutput" AfterTargets="Build" Condition="'$(Configuration)'=='Release'">
+    <ItemGroup>
+      <!-- Compile-time metadata (framework + the app's own Talay.winmd) and the
+           linker import-library side-effects; none are read at runtime. -->
+      <_TrimFile Include="$(OutDir)*.winmd" />
+      <_TrimFile Include="$(OutDir)$(TargetName).lib" />
+      <_TrimFile Include="$(OutDir)$(TargetName).exp" />
+      <!-- Visual Studio design-time helper (Windows App SDK InteractiveExperiences). -->
+      <_TrimFile Include="$(OutDir)Microsoft.UI.Designer.dll" />
+    </ItemGroup>
+    <Delete Files="@(_TrimFile)" TreatErrorsAsWarnings="true" />
+    <!-- Keep only the languages Talay localizes to; every other WinUI language
+         falls back to en-US. A directory is a language pack iff it holds the
+         xaml .mui marker, so Assets, Styles and Microsoft.UI.Xaml are spared. -->
+    <ItemGroup>
+      <!-- Step 1: list every immediate subfolder. No metadata Condition here; a
+           Condition that reads %(Identity) on a list-valued Include does not
+           batch per item, so it would silently match nothing. -->
+      <_OutDirSubDir Include="$([System.IO.Directory]::GetDirectories('$(OutDir)'))" />
+      <!-- Step 2: of those existing items (which DO batch), keep the language
+           packs (folders holding the xaml .mui marker) only for en-us and
+           tr-TR; queue the rest for removal. -->
+      <_LangDirToTrim Include="@(_OutDirSubDir)"
+                      Condition="$([System.IO.File]::Exists('%(Identity)\Microsoft.ui.xaml.dll.mui')) AND '%(Filename)' != 'en-us' AND '%(Filename)' != 'tr-TR'" />
+    </ItemGroup>
+    <RemoveDir Directories="@(_LangDirToTrim)" />
+    <Message Importance="high"
+             Text="TrimReleaseOutput: pruned metadata, design-time and unused-language files from $(OutDir)" />
+  </Target>
+</Project>
