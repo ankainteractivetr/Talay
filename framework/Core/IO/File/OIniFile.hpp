@@ -1,0 +1,123 @@
+/*
+
+MIT License
+
+Copyright (c) 2025 AnkA Interactive
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
+#ifndef ANKA_CORE_FILE_OINIFILE_HPP
+#define ANKA_CORE_FILE_OINIFILE_HPP
+
+#include "IIniFile.hpp"
+
+namespace anka
+{
+	namespace Core
+	{
+		namespace File
+		{
+			/*
+			*
+			* Concrete OIniFile Class
+			*
+			*/
+
+			class OIniFile final : public IIniFile
+			{
+				public:
+
+					OIniFile();
+					OIniFile(const std::wstring& objectName,
+								const std::wstring& fileName,
+								const std::filesystem::path& filePath);
+					OIniFile(const OIniFile& object) = delete;
+					OIniFile(OIniFile&& object) noexcept = delete;
+
+					~OIniFile() noexcept override;
+
+					const std::wstring& getFileName(void) const override;
+					void                setFileName(const std::wstring& fileName) override;
+
+					const std::filesystem::path& getFilePath(void) const override;
+					void                         setFilePath(const std::filesystem::path& pathName) override;
+
+					OIniFile& operator=(const OIniFile& object) = delete;
+					OIniFile& operator=(OIniFile&& object) noexcept = delete;
+
+					//
+					// IObject overrides
+					//
+
+					const std::wstring& getName(void) const override;
+					void                setName(const std::wstring& name) override;
+
+					std::uint64_t getId(void) const override;
+
+					//
+					// IFile overrides
+					//
+
+					bool open(void) override;
+
+					bool isOpen(void) const override;
+
+					bool close(void) override;
+
+					bool write(const void* buffer, std::size_t size) override;
+
+					bool truncate(void) override;
+
+					std::vector<unsigned char> readAll(void) override;
+
+					//
+					// ITextFile overrides
+					//
+
+					virtual bool appendText(const std::wstring& text) override;
+
+					virtual std::wstring readAllText(void) override;
+
+					//
+					// IIniFile overrides
+					//
+
+					virtual bool readSections() override;
+
+					virtual bool writeSections() override;
+
+					virtual std::wstring getValue(const std::wstring& sectionName,const std::wstring& valueName) override;
+
+					virtual bool setValue(const std::wstring& sectionName,const std::wstring& valueName,const std::wstring& value) override;
+
+					virtual bool generateDefaults() override;
+
+
+				private:
+
+					struct Impl;
+					std::unique_ptr<Impl> m_pImpl;
+			};
+		}
+	}
+}
+
+#endif // ANKA_CORE_FILE_OINIFILE_HPP
