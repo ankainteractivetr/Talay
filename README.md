@@ -22,7 +22,6 @@ Explorer right‑click menu.
 ## Table of contents
 
 - [About](#about)
-- [Screenshots](#screenshots)
 - [Features](#features)
 - [Supported formats](#supported-formats)
 - [Architecture & design](#architecture--design)
@@ -58,19 +57,6 @@ The codebase (~30k lines) is deliberately split into two layers:
 This is a portfolio project: the goal is not just a working program, but a clean,
 well‑documented, **SOLID** codebase that demonstrates design‑pattern fluency and
 idiomatic modern C++.
-
----
-
-## Screenshots
-
-> _Add screenshots / GIFs here — the viewport, the folder reel, the library panel, the
-> conversion window, and the effects menu all make great captures._
-
-<!--
-| Viewer | Library | Convert |
-| :----: | :-----: | :-----: |
-| ![viewer](docs/viewer.png) | ![library](docs/library.png) | ![convert](docs/convert.png) |
--->
 
 ---
 
